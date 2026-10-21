@@ -404,23 +404,38 @@ if (menuToggle && navLinks) {
   });
 }
 
+
 /* =====================================
-   PILIHAN PAKET WISATA
+   PILIHAN PAKET WISATA VIA WHATSAPP
    ===================================== */
 
+// GANTI dengan nomor WhatsApp Admin.
+// Gunakan kode negara 62, tanpa tanda + atau angka 0 di depan.
+const adminWhatsApp = "6281234567890";
+
 document.querySelectorAll("[data-package]").forEach((link) => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
     const packageName = link.dataset.package;
-    const emailContact = document.getElementById("emailContact");
 
-    if (emailContact) {
-      const subject = `Informasi Paket Wisata - ${packageName}`;
+    const message = [
+      "Halo Admin Nusa Religi!",
+      "",
+      "Saya tertarik untuk memesan paket wisata:",
+      packageName,
+      "",
+      "Mohon informasi mengenai harga, jadwal, dan cara pemesanannya.",
+      "Terima kasih."
+    ].join("\n");
 
-      emailContact.href =
-        `mailto:info@nusareligi.id?subject=${encodeURIComponent(subject)}`;
-    }
+    const whatsappURL =
+      `https://wa.me/${adminWhatsApp}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank", "noopener,noreferrer");
   });
 });
+
 
 /* =====================================
    TAHUN OTOMATIS DI FOOTER
