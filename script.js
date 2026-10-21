@@ -1,4 +1,3 @@
-
 "use strict";
 
 /* =====================================
@@ -12,7 +11,7 @@ const destinations = [
     location: "Jakarta Pusat, DKI Jakarta",
     category: "Masjid",
     description: "Masjid nasional Indonesia yang menjadi simbol persatuan, toleransi, dan kehidupan beragama.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid%20Istiqlal%20Jakarta.jpg?width=900"
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid%20Istiqlal%20Jakarta.jpg?width=1000"
   },
   {
     name: "Masjid Agung Demak",
@@ -20,7 +19,7 @@ const destinations = [
     location: "Demak, Jawa Tengah",
     category: "Masjid",
     description: "Masjid bersejarah yang erat kaitannya dengan perkembangan Islam di Pulau Jawa.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid%20Agung%20Demak.jpg?width=900"
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid%20Agung%20Demak.jpg?width=1000"
   },
   {
     name: "Gua Maria Sendangsono",
@@ -28,7 +27,7 @@ const destinations = [
     location: "Kulon Progo, DI Yogyakarta",
     category: "Ziarah",
     description: "Tempat ziarah Katolik yang dikenal dengan suasana alamnya yang teduh dan menenangkan.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Gua%20Maria%20Sendangsono%20%281%29.jpg?width=900"
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Gua%20Maria%20Sendangsono.jpg?width=1000"
   },
   {
     name: "Gereja Blenduk",
@@ -36,7 +35,7 @@ const destinations = [
     location: "Semarang, Jawa Tengah",
     category: "Gereja",
     description: "Gereja bersejarah di kawasan Kota Lama Semarang dengan arsitektur kolonial yang khas.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Gereja%20Blenduk.JPG?width=900"
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Gereja%20Blenduk.JPG?width=1000"
   },
   {
     name: "Candi Borobudur",
@@ -44,7 +43,7 @@ const destinations = [
     location: "Magelang, Jawa Tengah",
     category: "Lainnya",
     description: "Warisan dunia berupa monumen Buddha yang menyimpan nilai sejarah, seni, dan spiritualitas.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Borobudur%20Temple.jpg?width=900"
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Borobudur%20temple.jpg?width=1000"
   },
   {
     name: "Masjid Menara Kudus",
@@ -52,7 +51,7 @@ const destinations = [
     location: "Kudus, Jawa Tengah",
     category: "Masjid",
     description: "Masjid bersejarah dengan perpaduan unsur arsitektur yang mencerminkan akulturasi budaya.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid%20Menara%20Kudus.jpg?width=900"
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid%20Menara%20Kudus.jpg?width=1000"
   },
   {
     name: "Masjid Raya Baiturrahman",
@@ -60,7 +59,7 @@ const destinations = [
     location: "Banda Aceh, Aceh",
     category: "Masjid",
     description: "Ikon bersejarah Aceh yang dikenal dengan kubah, menara, dan arsitekturnya yang megah.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid%20Raya%20Baiturrahman%20di%20Banda%20Aceh.jpg?width=900"
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid%20Raya%20Baiturrahman%20di%20Banda%20Aceh.jpg?width=1000"
   },
   {
     name: "Istana Maimun",
@@ -68,7 +67,7 @@ const destinations = [
     location: "Medan, Sumatera Utara",
     category: "Lainnya",
     description: "Istana Kesultanan Deli yang memperlihatkan kekayaan sejarah dan budaya Melayu.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Istana%20Maimun%2C%20Medan.jpg?width=900"
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Istana%20Maimun%20Medan.jpg?width=1000"
   },
   {
     name: "Masjid Raya Sumatera Barat",
@@ -76,7 +75,7 @@ const destinations = [
     location: "Padang, Sumatera Barat",
     category: "Masjid",
     description: "Masjid dengan desain unik yang mengadaptasi bentuk atap rumah tradisional Minangkabau.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid%20Raya%20Sumatera%20Barat.jpg?width=900"
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid%20Raya%20Sumatera%20Barat.jpg?width=1000"
   },
   {
     name: "Pura Besakih",
@@ -84,7 +83,7 @@ const destinations = [
     location: "Karangasem, Bali",
     category: "Pura",
     description: "Kompleks pura penting di lereng Gunung Agung yang menjadi pusat spiritual umat Hindu Bali.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Pura%20Besakih.JPG?width=900"
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Pura%20Besakih.JPG?width=1000"
   },
   {
     name: "Pura Ulun Danu Beratan",
@@ -92,7 +91,7 @@ const destinations = [
     location: "Tabanan, Bali",
     category: "Pura",
     description: "Pura tepi danau dengan lanskap pegunungan yang menjadi salah satu ikon wisata Bali.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Ulun%20Danu%20Beratan%20Temple.jpg?width=900"
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Pura%20Ulun%20Danu%20Beratan.jpg?width=1000"
   },
   {
     name: "Masjid 99 Kubah",
@@ -100,7 +99,7 @@ const destinations = [
     location: "Makassar, Sulawesi Selatan",
     category: "Masjid",
     description: "Masjid dengan desain kontemporer dan susunan kubah berwarna yang menjadi ikon Makassar.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/MASJID%2099%20KUBAH%2C%20MAKASSAR%202026.jpg?width=900"
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/MASJID%2099%20KUBAH%2C%20MAKASSAR%202026.jpg?width=1000"
   },
   {
     name: "Masjid Islamic Center Samarinda",
@@ -108,7 +107,7 @@ const destinations = [
     location: "Samarinda, Kalimantan Timur",
     category: "Masjid",
     description: "Masjid megah di tepi Sungai Mahakam yang menjadi salah satu landmark Samarinda.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid%20Islamic%20Centre%20Samarinda.jpg?width=900"
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/ISLAMIC%20CENTER%20SAMARINDA.jpg?width=1000"
   }
 ];
 
