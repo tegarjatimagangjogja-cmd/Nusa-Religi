@@ -1,1 +1,398 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nusa Religi - Jelajahi destinasi wisata rohani Indonesia dengan penuh makna.">
+  <meta name="theme-color" content="#174c3c">
+  <title>Nusa Religi | Perjalanan Penuh Makna</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container navbar">
+    <a class="brand" href="#beranda">
+      <span class="brand-icon">✦</span>
+      <span>Nusa <strong>Religi</strong>
+        <small>PERJALANAN PENUH MAKNA</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Buka menu" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#beranda">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#destinasi">Destinasi</a>
+      <a href="#paket">Paket Wisata</a>
+      <a href="#kontak" class="nav-button">Hubungi Kami ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="beranda">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="eyebrow">MENEMUKAN MAKNA DALAM PERJALANAN</p>
+      <h1>Perjalanan yang<br><em>menenangkan jiwa.</em></h1>
+      <p class="hero-description">
+        Jelajahi tempat-tempat penuh makna, kenali keberagaman,
+        dan temukan ruang untuk merenung dalam perjalanan yang berkesan.
+      </p>
+      <div class="hero-buttons">
+        <a href="#destinasi" class="button button-gold">
+          Jelajahi Destinasi ↗
+        </a>
+        <a href="#tentang" class="button button-text">
+          Kenali Nusa Religi →
+        </a>
+      </div>
+      <div class="hero-caption">
+        Menghargai keberagaman. Merayakan kedamaian.
+      </div>
+    </div>
+  </section>
+
+  <section class="section about" id="tentang">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <p class="eyebrow">TENTANG NUSA RELIGI</p>
+          <h2>Setiap tempat punya cerita.<br>
+            <em>Setiap perjalanan punya arti.</em>
+          </h2>
+        </div>
+        <div class="about-text">
+          <p>
+            Nusa Religi hadir sebagai panduan untuk menjelajahi
+            destinasi wisata rohani di Indonesia. Dari rumah ibadah
+            hingga tempat ziarah yang penuh sejarah, setiap perjalanan
+            mengajak kita mengenal budaya, tradisi, dan nilai kemanusiaan.
+          </p>
+          <a href="#destinasi" class="text-link">
+            Temukan destinasi bermakna →
+          </a>
+        </div>
+      </div>
+
+      <div class="values">
+        <article class="value">
+          <span>✧</span>
+          <div><h3>Penuh Makna</h3>
+            <p>Perjalanan yang menginspirasi.</p>
+          </div>
+        </article>
+        <article class="value">
+          <span>◎</span>
+          <div><h3>Untuk Semua</h3>
+            <p>Menghormati keberagaman keyakinan.</p>
+          </div>
+        </article>
+        <article class="value">
+          <span>⌁</span>
+          <div><h3>Jelajah Budaya</h3>
+            <p>Mengenal warisan dan tradisi.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section destinations" id="destinasi">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PILIHAN PERJALANAN</p>
+          <h2>Destinasi <em>Pilihan</em></h2>
+          <p class="section-description">
+            Temukan tempat menarik untuk dikunjungi, dipelajari,
+            dan dihargai.
+          </p>
+        </div>
+        <input id="searchInput" class="search-input"
+          type="search" placeholder="⌕  Cari destinasi..."
+          aria-label="Cari destinasi">
+      </div>
+
+      <div class="filters" aria-label="Filter destinasi">
+        <button class="filter active" data-filter="semua"
+          aria-pressed="true">Semua</button>
+        <button class="filter" data-filter="islam"
+          aria-pressed="false">Islam</button>
+        <button class="filter" data-filter="kristen"
+          aria-pressed="false">Kristen & Katolik</button>
+        <button class="filter" data-filter="hindu"
+          aria-pressed="false">Hindu</button>
+        <button class="filter" data-filter="buddha"
+          aria-pressed="false">Buddha</button>
+        <button class="filter" data-filter="budaya"
+          aria-pressed="false">Sejarah & Budaya</button>
+      </div>
+
+      <div class="destination-grid" id="destinationGrid">
+
+        <article class="destination-card" data-category="islam"
+          data-search="masjid istiqlal jakarta islam">
+          <div class="destination-image"
+            style="--image:url('https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=900&q=80')">
+            <span>Jakarta</span>
+          </div>
+          <div class="destination-info">
+            <p class="category">ISLAM · ARSITEKTUR</p>
+            <h3>Masjid Istiqlal</h3>
+            <p>Ikon kebersamaan dengan arsitektur yang mengesankan
+              di pusat Jakarta.</p>
+            <a class="destination-link" href="#kontak"
+              data-destination="Masjid Istiqlal">
+              Informasi Destinasi ↗
+            </a>
+          </div>
+        </article>
+
+        <article class="destination-card" data-category="kristen"
+          data-search="gua maria sendangsono kulon progo katolik ziarah">
+          <div class="destination-image"
+            style="--image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80')">
+            <span>Kulon Progo, Yogyakarta</span>
+          </div>
+          <div class="destination-info">
+            <p class="category">KATOLIK · ZIARAH</p>
+            <h3>Gua Maria Sendangsono</h3>
+            <p>Tempat ziarah di tengah suasana alam yang teduh
+              dan sarat sejarah.</p>
+            <a class="destination-link" href="#kontak"
+              data-destination="Gua Maria Sendangsono">
+              Informasi Destinasi ↗
+            </a>
+          </div>
+        </article>
+
+        <article class="destination-card" data-category="hindu"
+          data-search="pura besakih bali hindu gunung agung">
+          <div class="destination-image"
+            style="--image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80')">
+            <span>Karangasem, Bali</span>
+          </div>
+          <div class="destination-info">
+            <p class="category">HINDU · WARISAN</p>
+            <h3>Pura Besakih</h3>
+            <p>Kompleks pura di lereng Gunung Agung yang
+              menyimpan kekayaan tradisi Bali.</p>
+            <a class="destination-link" href="#kontak"
+              data-destination="Pura Besakih">
+              Informasi Destinasi ↗
+            </a>
+          </div>
+        </article>
+
+        <article class="destination-card" data-category="buddha"
+          data-search="candi borobudur magelang buddha sejarah">
+          <div class="destination-image"
+            style="--image:url('https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=900&q=80')">
+            <span>Magelang, Jawa Tengah</span>
+          </div>
+          <div class="destination-info">
+            <p class="category">BUDDHA · SEJARAH</p>
+            <h3>Candi Borobudur</h3>
+            <p>Warisan monumental dengan relief dan stupa yang
+              menyimpan kisah sejarah.</p>
+            <a class="destination-link" href="#kontak"
+              data-destination="Candi Borobudur">
+              Informasi Destinasi ↗
+            </a>
+          </div>
+        </article>
+
+        <article class="destination-card" data-category="kristen"
+          data-search="bukit rhema gereja ayam magelang kristen">
+          <div class="destination-image"
+            style="--image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80')">
+            <span>Magelang, Jawa Tengah</span>
+          </div>
+          <div class="destination-info">
+            <p class="category">KRISTEN · ARSITEKTUR</p>
+            <h3>Bukit Rhema</h3>
+            <p>Bangunan unik di kawasan perbukitan yang menjadi
+              tujuan wisata dan refleksi.</p>
+            <a class="destination-link" href="#kontak"
+              data-destination="Bukit Rhema">
+              Informasi Destinasi ↗
+            </a>
+          </div>
+        </article>
+
+        <article class="destination-card" data-category="budaya"
+          data-search="candi prambanan yogyakarta hindu budaya sejarah">
+          <div class="destination-image"
+            style="--image:url('https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=900&q=80')">
+            <span>Sleman, Yogyakarta</span>
+          </div>
+          <div class="destination-info">
+            <p class="category">SEJARAH · BUDAYA</p>
+            <h3>Candi Prambanan</h3>
+            <p>Kompleks candi bersejarah dengan seni relief dan
+              arsitektur warisan Nusantara.</p>
+            <a class="destination-link" href="#kontak"
+              data-destination="Candi Prambanan">
+              Informasi Destinasi ↗
+            </a>
+          </div>
+        </article>
+
+      </div>
+      <p class="empty-message" id="emptyMessage" hidden>
+        Destinasi tidak ditemukan. Coba kata kunci lain.
+      </p>
+      <p class="disclaimer">
+        Informasi destinasi merupakan contoh awal. Periksa aturan
+        kunjungan dan jam operasional sebelum bepergian.
+      </p>
+    </div>
+  </section>
+
+  <section class="quote-section">
+    <div class="container quote-inner">
+      <span class="quote-mark">“</span>
+      <blockquote>
+        Perjalanan terbaik bukan hanya tentang seberapa jauh kita
+        melangkah, tetapi seberapa luas kita belajar memahami.
+      </blockquote>
+      <p>NUSA RELIGI · JELAJAHI DENGAN HATI</p>
+    </div>
+  </section>
+
+  <section class="section packages" id="paket">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">RENCANAKAN PERJALANAN</p>
+          <h2>Paket Wisata <em>Pilihan</em></h2>
+          <p class="section-description">
+            Inspirasi perjalanan untuk menjelajah dengan nyaman
+            dan penuh makna.
+          </p>
+        </div>
+      </div>
+
+      <div class="package-grid">
+        <article class="package-card">
+          <span class="package-label">SEHARI PENUH</span>
+          <h3>Jejak Religi Yogyakarta</h3>
+          <p class="package-location">Yogyakarta · Sejarah & budaya</p>
+          <p>Perjalanan mengenal situs bersejarah dan warisan budaya
+            di Yogyakarta.</p>
+          <div class="package-details">
+            <span>◷ 1 hari</span><span>◎ Rombongan kecil</span>
+          </div>
+          <div class="package-bottom">
+            <div><small>Harga contoh mulai dari</small>
+              <strong>Rp350.000 <small>/orang</small></strong>
+            </div>
+            <a href="#kontak" class="button button-outline"
+              data-package="Jejak Religi Yogyakarta">Tanya ↗</a>
+          </div>
+        </article>
+
+        <article class="package-card package-featured">
+          <span class="package-label">PILIHAN FLEKSIBEL</span>
+          <h3>Warisan Spiritual Jawa</h3>
+          <p class="package-location">Magelang & Yogyakarta</p>
+          <p>Eksplorasi candi, arsitektur bersejarah, dan lanskap
+            alam dalam satu perjalanan.</p>
+          <div class="package-details">
+            <span>◷ 2 hari 1 malam</span><span>◎ Keluarga / grup</span>
+          </div>
+          <div class="package-bottom">
+            <div><small>Harga contoh mulai dari</small>
+              <strong>Rp850.000 <small>/orang</small></strong>
+            </div>
+            <a href="#kontak" class="button button-outline"
+              data-package="Warisan Spiritual Jawa">Tanya ↗</a>
+          </div>
+        </article>
+
+        <article class="package-card">
+          <span class="package-label">PESONA NUSANTARA</span>
+          <h3>Ruang Hening Bali</h3>
+          <p class="package-location">Bali · Alam & warisan budaya</p>
+          <p>Menjelajahi arsitektur pura, tradisi lokal, dan
+            keindahan alam dengan saling menghormati.</p>
+          <div class="package-details">
+            <span>◷ 3 hari 2 malam</span><span>◎ Keluarga / grup</span>
+          </div>
+          <div class="package-bottom">
+            <div><small>Harga contoh mulai dari</small>
+              <strong>Rp1.650.000 <small>/orang</small></strong>
+            </div>
+            <a href="#kontak" class="button button-outline"
+              data-package="Ruang Hening Bali">Tanya ↗</a>
+          </div>
+        </article>
+      </div>
+      <p class="disclaimer">
+        Harga di atas adalah ilustrasi desain, bukan penawaran resmi.
+        Sesuaikan harga, fasilitas, jadwal, dan ketersediaan sebelum
+        website dipublikasikan.
+      </p>
+    </div>
+  </section>
+
+  <section class="contact-section" id="kontak">
+    <div class="container contact-grid">
+      <div>
+        <p class="eyebrow eyebrow-light">MULAI PERJALANANMU</p>
+        <h2>Temukan perjalanan<br><em>yang berarti bagimu.</em></h2>
+        <p>
+          Ceritakan destinasi yang ingin kamu kunjungi.
+          Kami siap membantu merencanakan langkah berikutnya.
+        </p>
+      </div>
+      <div class="contact-card">
+        <span class="contact-icon">↗</span>
+        <h3>Ingin tahu lebih lanjut?</h3>
+        <p>Hubungi kami untuk bertanya tentang destinasi atau paket wisata.</p>
+        <a href="#" id="contactButton" class="button button-gold">
+          Hubungi Nusa Religi ↗
+        </a>
+        <small>Pastikan kontak resmi sudah diatur sebelum website online.</small>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-main">
+    <a class="brand footer-brand" href="#beranda">
+      <span class="brand-icon">✦</span>
+      <span>Nusa <strong>Religi</strong>
+        <small>PERJALANAN PENUH MAKNA</small>
+      </span>
+    </a>
+    <p>Menghargai keberagaman.<br>Menemukan makna dalam perjalanan.</p>
+    <div class="footer-links">
+      <a href="#destinasi">Destinasi</a>
+      <a href="#paket">Paket Wisata</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> Nusa Religi.</span>
+    <a href="#beranda">Kembali ke atas ↑</a>
+  </div>
+</footer>
+
+</body>
+</html>
+
