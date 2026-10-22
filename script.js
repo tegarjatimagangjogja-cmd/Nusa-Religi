@@ -1,7 +1,7 @@
 
 "use strict";
 
-const ADMIN_WHATSAPP = "6281234567890";
+const ADMIN_WHATSAPP = "6289681198159";
 
 /*
  * Data gambar destinasi Wali Songo.
