@@ -244,15 +244,22 @@ if (categoryFilters) {
     });
 }
 
+
 function openWhatsApp(message) {
     const phone = ADMIN_WHATSAPP.replace(/\D/g, "");
 
-    if (!phone || phone === "6281234567890") {
-        alert(
-            "Ganti ADMIN_WHATSAPP di script.js dengan nomor WhatsApp admin yang sebenarnya."
-        );
+    if (!phone || phone.length < 10) {
+        alert("Nomor WhatsApp admin belum valid.");
         return;
     }
+
+    window.open(
+        "https://wa.me/" + phone + "?text=" + encodeURIComponent(message),
+        "_blank",
+        "noopener,noreferrer"
+    );
+}
+
 
     window.open(
         "https://wa.me/" + phone + "?text=" + encodeURIComponent(message),
@@ -296,10 +303,10 @@ const contactWhatsapp = document.getElementById("contactWhatsapp");
 
 if (contactWhatsapp) {
     contactWhatsapp.addEventListener("click", function (event) {
-        if (ADMIN_WHATSAPP === "6281234567890") {
-            event.preventDefault();
-            alert("Ganti nomor WhatsApp admin dengan nomor yang sebenarnya.");
-        }
+if (contactWhatsapp) {
+    contactWhatsapp.href =
+        "https://wa.me/" + ADMIN_WHATSAPP.replace(/\D/g, "");
+}
     });
 }
 
