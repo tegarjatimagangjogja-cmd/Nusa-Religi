@@ -3,10 +3,7 @@
 
 const ADMIN_WHATSAPP = "6289681198159";
 
-/*
- * Data gambar destinasi Wali Songo.
- */
-
+/* Data destinasi Wali Songo dengan foto khusus setiap lokasi. */
 const destinations = [
     {
         name: "Sunan Gresik",
@@ -14,8 +11,8 @@ const destinations = [
         category: "makam-wali",
         categoryLabel: "Makam Wali",
         description: "Ziarah ke makam Maulana Malik Ibrahim, salah satu tokoh penting dalam sejarah penyebaran Islam di Jawa.",
-        image: "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=900&q=85",
-        imageAlt: "Ilustrasi arsitektur Islam",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sunan%20Gresik%20%28Maulana%20Malik%20Ibrahim%29.jpg",
+        imageAlt: "Makam Sunan Gresik atau Maulana Malik Ibrahim",
         searchTerms: "sunan gresik maulana malik ibrahim makam gresik"
     },
     {
@@ -23,7 +20,7 @@ const destinations = [
         location: "Surabaya, Jawa Timur",
         category: "makam-wali",
         categoryLabel: "Makam Wali",
-        description: "Kunjungi kawasan ziarah Sunan Ampel yang berada di Surabaya, salah satu tujuan wisata religi terkenal.",
+        description: "Kunjungi kawasan ziarah Sunan Ampel di Surabaya, salah satu tujuan wisata religi terkenal.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Ampel.jpg",
         imageAlt: "Makam Sunan Ampel di Surabaya",
         searchTerms: "sunan ampel raden rahmat makam surabaya"
@@ -33,9 +30,9 @@ const destinations = [
         location: "Tuban, Jawa Timur",
         category: "makam-wali",
         categoryLabel: "Makam Wali",
-        description: "Kenali sejarah Sunan Bonang dan tempat yang berkaitan dengan perjalanan dakwah beliau di Tuban.",
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Tempat%20pasujudan%20sunan%20bonang.jpg",
-        imageAlt: "Tempat pasujudan Sunan Bonang",
+        description: "Kenali sejarah Sunan Bonang dan kompleks pemakaman beliau di Tuban.",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Kompleks%20Pemakaman%20Sunan%20Bonang%2C%20Tuban.jpg",
+        imageAlt: "Kompleks pemakaman Sunan Bonang di Tuban",
         searchTerms: "sunan bonang makam tuban pasujudan"
     },
     {
@@ -43,9 +40,9 @@ const destinations = [
         location: "Lamongan, Jawa Timur",
         category: "makam-wali",
         categoryLabel: "Makam Wali",
-        description: "Destinasi ziarah yang berkaitan dengan Sunan Drajat, tokoh dakwah yang dikenal dengan ajaran sosialnya.",
-        image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=900&q=85",
-        imageAlt: "Ilustrasi bangunan berarsitektur Islam",
+        description: "Destinasi ziarah Sunan Drajat, tokoh dakwah yang dikenal dengan ajaran sosialnya.",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Drajat.jpg",
+        imageAlt: "Makam Sunan Drajat di Paciran, Lamongan",
         searchTerms: "sunan drajat makam lamongan jawa timur"
     },
     {
@@ -53,9 +50,9 @@ const destinations = [
         location: "Gresik, Jawa Timur",
         category: "makam-wali",
         categoryLabel: "Makam Wali",
-        description: "Jelajahi kompleks bersejarah Giri Kedaton yang berkaitan dengan Sunan Giri di Kabupaten Gresik.",
+        description: "Jelajahi kompleks bersejarah makam Sunan Giri di Kabupaten Gresik.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Giri%20Kedaton-Makam%20Sunan%20Giri.jpg",
-        imageAlt: "Kompleks makam Sunan Giri",
+        imageAlt: "Kompleks makam Sunan Giri di Gresik",
         searchTerms: "sunan giri raden paku giri kedaton gresik"
     },
     {
@@ -63,7 +60,7 @@ const destinations = [
         location: "Kudus, Jawa Tengah",
         category: "sejarah-islam",
         categoryLabel: "Sejarah Islam",
-        description: "Kenali warisan sejarah Sunan Kudus dan kawasan Menara Kudus yang memiliki ciri arsitektur khas.",
+        description: "Kenali warisan sejarah Sunan Kudus dan kawasan makamnya yang berdekatan dengan Menara Kudus.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Kudus.jpg",
         imageAlt: "Makam Sunan Kudus",
         searchTerms: "sunan kudus menara kudus makam jawa tengah"
@@ -74,8 +71,8 @@ const destinations = [
         category: "makam-wali",
         categoryLabel: "Makam Wali",
         description: "Kunjungi kawasan makam Sunan Kalijaga di Kadilangu, Demak, salah satu tujuan utama wisata ziarah.",
-        image: "https://visitjawatengah.jatengprov.go.id/assets/images/destinasi/makam-sunan-kalijaga.jpg",
-        imageAlt: "Destinasi makam Sunan Kalijaga di Demak",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Kali%20Jaga%20Di%20Kadilangu%20Kab.Demak.jpg",
+        imageAlt: "Makam Sunan Kalijaga di Kadilangu, Demak",
         searchTerms: "sunan kalijaga kadilangu demak makam"
     },
     {
@@ -84,8 +81,8 @@ const destinations = [
         category: "makam-wali",
         categoryLabel: "Makam Wali",
         description: "Destinasi ziarah di kawasan Gunung Muria yang berkaitan dengan Sunan Muria.",
-        image: "https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=900&q=85",
-        imageAlt: "Ilustrasi suasana tempat ziarah",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Muria.jpg",
+        imageAlt: "Makam Sunan Muria di kawasan Gunung Muria",
         searchTerms: "sunan muria makam gunung muria colo kudus"
     },
     {
@@ -94,8 +91,8 @@ const destinations = [
         category: "makam-wali",
         categoryLabel: "Makam Wali",
         description: "Telusuri kawasan ziarah Sunan Gunung Jati yang memiliki peran penting dalam sejarah Islam di Cirebon.",
-        image: "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=900&q=85",
-        imageAlt: "Ilustrasi arsitektur Islam",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Entrance%20to%20Makam%20Sunan%20Gunung%20Jati.jpg",
+        imageAlt: "Pintu masuk makam Sunan Gunung Jati di Cirebon",
         searchTerms: "sunan gunung jati syarif hidayatullah makam cirebon"
     }
 ];
