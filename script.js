@@ -5,7 +5,6 @@ const ADMIN_WHATSAPP = "6289681198159";
 
 /*
  * Data gambar destinasi Wali Songo.
- * Foto menggunakan tautan gambar destinasi yang berbeda.
  */
 
 const destinations = [
@@ -244,6 +243,7 @@ if (categoryFilters) {
     });
 }
 
+/* WhatsApp admin */
 
 function openWhatsApp(message) {
     const phone = ADMIN_WHATSAPP.replace(/\D/g, "");
@@ -253,20 +253,13 @@ function openWhatsApp(message) {
         return;
     }
 
-    window.open(
-        "https://wa.me/" + phone + "?text=" + encodeURIComponent(message),
-        "_blank",
-        "noopener,noreferrer"
-    );
+    const whatsappURL =
+        "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank", "noopener,noreferrer");
 }
 
-
-    window.open(
-        "https://wa.me/" + phone + "?text=" + encodeURIComponent(message),
-        "_blank",
-        "noopener,noreferrer"
-    );
-}
+/* Tombol tanya destinasi */
 
 if (destinationGrid) {
     destinationGrid.addEventListener("click", function (event) {
@@ -288,6 +281,8 @@ if (destinationGrid) {
     });
 }
 
+/* Tombol kontak paket */
+
 document.querySelectorAll(".package-contact").forEach(function (button) {
     button.addEventListener("click", function () {
         const packageName = button.dataset.package || "Paket wisata";
@@ -299,16 +294,24 @@ document.querySelectorAll(".package-contact").forEach(function (button) {
     });
 });
 
+/* Tautan WhatsApp halaman kontak */
+
 const contactWhatsapp = document.getElementById("contactWhatsapp");
 
 if (contactWhatsapp) {
-    contactWhatsapp.addEventListener("click", function (event) {
-if (contactWhatsapp) {
     contactWhatsapp.href =
         "https://wa.me/" + ADMIN_WHATSAPP.replace(/\D/g, "");
-}
+
+    contactWhatsapp.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        openWhatsApp(
+            "Halo Admin Nusa Religi, saya ingin bertanya mengenai wisata religi."
+        );
     });
 }
+
+/* Menu navigasi */
 
 if (menuToggle && mainNav) {
     menuToggle.addEventListener("click", function () {
@@ -327,10 +330,14 @@ if (menuToggle && mainNav) {
     });
 }
 
+/* Tahun otomatis */
+
 const yearElement = document.getElementById("year");
 
 if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
 }
+
+/* Tampilkan destinasi */
 
 renderDestinations(destinations);
