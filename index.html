@@ -1,199 +1,1367 @@
 
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nusa Religi — temukan destinasi wisata rohani, perjalanan ziarah, dan paket perjalanan penuh makna.">
-  <meta name="theme-color" content="#174c3c">
-  <title>Nusa Religi — Perjalanan Penuh Makna</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="Nusa Religi beranda">
-        <span class="brand-mark" aria-hidden="true">✦</span>
-        <span>Nusa <strong>Religi</strong><small>PERJALANAN PENUH MAKNA</small></span>
-      </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="mainNav">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="main-nav" id="mainNav" aria-label="Navigasi utama">
-        <a href="#top">Beranda</a>
-        <a href="#destinasi">Destinasi</a>
-        <a href="#paket">Paket Wisata</a>
-        <a href="#tentang">Tentang Kami</a>
-        <a class="nav-contact" href="#kontak">Hubungi Kami <span>↗</span></a>
-      </nav>
-    </div>
-  </header>
+/* =========================================
+   NUSA RELIGI — STYLE.CSS
+   Desain elegan, responsif, dan ramah pengguna
+   ========================================= */
 
-  <main>
-    <section class="hero">
-      <div class="hero-image" role="img" aria-label="Pemandangan tempat ibadah dan alam yang tenang"></div>
-      <div class="hero-shade"></div>
-      <div class="container hero-content">
-        <p class="eyebrow light"><span></span> MENEMUKAN MAKNA DALAM PERJALANAN</p>
-        <h1>Perjalanan yang<br><em>menenangkan jiwa.</em></h1>
-        <p class="hero-copy">Jelajahi tempat-tempat penuh makna, kenali keberagaman, dan temukan ruang untuk merenung dalam perjalanan yang berkesan.</p>
-        <div class="hero-actions">
-          <a class="button button-gold" href="#destinasi">Jelajahi Destinasi <span>↗</span></a>
-          <a class="text-link light-link" href="#tentang">Kenali Nusa Religi <span>→</span></a>
-        </div>
-        <div class="hero-note"><span class="note-line"></span> Menghargai keberagaman. Merayakan kedamaian.</div>
-      </div>
-      <div class="hero-index"><span>01</span> / PERJALANAN BERMAKNA</div>
-    </section>
+:root {
+  --green: #174c3c;
+  --green-dark: #10372c;
+  --green-light: #e9f0eb;
+  --gold: #d8b878;
+  --gold-dark: #a98545;
+  --cream: #f7f5ef;
+  --paper: #fffefa;
+  --ink: #25352d;
+  --muted: #68756d;
+  --line: #e4e5dc;
+  --font-body: "DM Sans", sans-serif;
+  --font-heading: "Playfair Display", serif;
+  --shadow: 0 14px 38px rgba(22, 54, 41, 0.09);
+}
 
-    <section class="intro section-pad" id="tentang">
-      <div class="container intro-grid">
-        <div>
-          <p class="eyebrow"><span></span> TENTANG NUSA RELIGI</p>
-          <h2>Setiap tempat punya cerita.<br><em>Setiap perjalanan punya arti.</em></h2>
-        </div>
-        <div class="intro-copy">
-          <p>Nusa Religi hadir sebagai panduan untuk menjelajahi destinasi wisata rohani di Indonesia. Dari rumah ibadah yang megah hingga tempat ziarah yang hening, setiap perjalanan mengajak kita mengenal sejarah, budaya, dan nilai-nilai kemanusiaan.</p>
-          <a class="text-link dark-link" href="#destinasi">Temukan tempat bermakna <span>→</span></a>
-        </div>
-      </div>
-      <div class="container value-strip">
-        <div class="value-item"><span class="value-icon">✧</span><div><strong>Penuh Makna</strong><small>Perjalanan yang menginspirasi</small></div></div>
-        <div class="value-item"><span class="value-icon">◎</span><div><strong>Ruang untuk Semua</strong><small>Menghormati keberagaman keyakinan</small></div></div>
-        <div class="value-item"><span class="value-icon">⌁</span><div><strong>Jelajah Budaya</strong><small>Mengenal warisan dan tradisi</small></div></div>
-      </div>
-    </section>
+* {
+  box-sizing: border-box;
+}
 
-    <section class="destinations section-pad" id="destinasi">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow"><span></span> PILIHAN PERJALANAN</p>
-            <h2>Destinasi <em>pilihan</em></h2>
-            <p class="section-desc">Temukan tempat yang menarik untuk dikunjungi, dipelajari, dan dihargai.</p>
-          </div>
-          <div class="search-box">
-            <label class="sr-only" for="destinationSearch">Cari destinasi</label>
-            <span aria-hidden="true">⌕</span>
-            <input id="destinationSearch" type="search" placeholder="Cari destinasi..." autocomplete="off">
-          </div>
-        </div>
-        <div class="filter-row" role="group" aria-label="Filter kategori destinasi">
-          <button class="filter-chip active" data-filter="semua" aria-pressed="true">Semua Destinasi</button>
-          <button class="filter-chip" data-filter="islam" aria-pressed="false">Islam</button>
-          <button class="filter-chip" data-filter="kristen-katolik" aria-pressed="false">Kristen & Katolik</button>
-          <button class="filter-chip" data-filter="hindu" aria-pressed="false">Hindu</button>
-          <button class="filter-chip" data-filter="buddha" aria-pressed="false">Buddha</button>
-          <button class="filter-chip" data-filter="budaya" aria-pressed="false">Sejarah & Budaya</button>
-        </div>
-        <div class="destination-grid" id="destinationGrid">
-          <article class="destination-card" data-category="islam" data-search="masjid istiqlal jakarta islam masjid arsitektur">
-            <div class="card-image image-istiqlal"><span class="image-label">Jakarta</span><span class="image-number">01</span></div>
-            <div class="card-body"><p class="card-category">ISLAM · ARSITEKTUR</p><h3>Masjid Istiqlal</h3><p>Ikon kebersamaan dan salah satu masjid terbesar di Asia Tenggara, dengan arsitektur yang mengesankan.</p><a class="card-link" href="#kontak" data-destination="Masjid Istiqlal">Lihat informasi <span>↗</span></a></div>
-          </article>
-          <article class="destination-card" data-category="kristen-katolik" data-search="gua maria sendangsono kulon progo katolik ziarah alam">
-            <div class="card-image image-sendangsono"><span class="image-label">Kulon Progo, Yogyakarta</span><span class="image-number">02</span></div>
-            <div class="card-body"><p class="card-category">KATOLIK · ZIARAH</p><h3>Gua Maria Sendangsono</h3><p>Tempat ziarah di tengah suasana alam yang teduh, dikenal dengan nilai sejarah dan ketenangannya.</p><a class="card-link" href="#kontak" data-destination="Gua Maria Sendangsono">Lihat informasi <span>↗</span></a></div>
-          </article>
-          <article class="destination-card" data-category="hindu" data-search="pura besakih bali hindu pura gunung agung">
-            <div class="card-image image-besakih"><span class="image-label">Karangasem, Bali</span><span class="image-number">03</span></div>
-            <div class="card-body"><p class="card-category">HINDU · WARISAN</p><h3>Pura Besakih</h3><p>Kompleks pura penting di lereng Gunung Agung yang memadukan lanskap alam dan tradisi Bali.</p><a class="card-link" href="#kontak" data-destination="Pura Besakih">Lihat informasi <span>↗</span></a></div>
-          </article>
-          <article class="destination-card" data-category="buddha" data-search="candi borobudur magelang buddha warisan dunia sejarah">
-            <div class="card-image image-borobudur"><span class="image-label">Magelang, Jawa Tengah</span><span class="image-number">04</span></div>
-            <div class="card-body"><p class="card-category">BUDDHA · SEJARAH</p><h3>Candi Borobudur</h3><p>Warisan monumental dengan relief dan stupa yang menyimpan kisah sejarah serta ajaran Buddha.</p><a class="card-link" href="#kontak" data-destination="Candi Borobudur">Lihat informasi <span>↗</span></a></div>
-          </article>
-          <article class="destination-card" data-category="kristen-katolik" data-search="gereja ayam bukit rhema magelang kristen katolik arsitektur">
-            <div class="card-image image-rhema"><span class="image-label">Magelang, Jawa Tengah</span><span class="image-number">05</span></div>
-            <div class="card-body"><p class="card-category">KRISTEN · ARSITEKTUR</p><h3>Gereja Ayam / Bukit Rhema</h3><p>Bangunan unik di kawasan perbukitan yang menjadi tempat refleksi dan tujuan wisata populer.</p><a class="card-link" href="#kontak" data-destination="Bukit Rhema">Lihat informasi <span>↗</span></a></div>
-          </article>
-          <article class="destination-card" data-category="budaya" data-search="kompleks candi prambanan yogyakarta hindu budaya sejarah">
-            <div class="card-image image-prambanan"><span class="image-label">Sleman, Yogyakarta</span><span class="image-number">06</span></div>
-            <div class="card-body"><p class="card-category">SEJARAH · BUDAYA</p><h3>Kompleks Candi Prambanan</h3><p>Kompleks candi bersejarah dengan seni relief dan arsitektur yang menjadi bagian penting warisan Nusantara.</p><a class="card-link" href="#kontak" data-destination="Kompleks Candi Prambanan">Lihat informasi <span>↗</span></a></div>
-          </article>
-        </div>
-        <p class="empty-state" id="emptyState" hidden>Destinasi tidak ditemukan. Coba kata kunci atau kategori lain.</p>
-        <p class="content-note">Catatan: informasi destinasi di atas merupakan contoh awal. Periksa aturan kunjungan, jam operasional, dan ketentuan masing-masing tempat sebelum berangkat.</p>
-      </div>
-    </section>
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
 
-    <section class="quote-band">
-      <div class="container quote-content">
-        <span class="quote-mark">“</span>
-        <blockquote>Perjalanan terbaik bukan hanya tentang seberapa jauh kita melangkah, tetapi seberapa luas kita belajar memahami.</blockquote>
-        <p>NUSA RELIGI · JELAJAHI DENGAN HATI</p>
-      </div>
-    </section>
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
 
-    <section class="packages section-pad" id="paket">
-      <div class="container">
-        <div class="section-heading">
-          <div><p class="eyebrow"><span></span> RENCANAKAN PERJALANAN</p><h2>Paket wisata <em>pilihan</em></h2><p class="section-desc">Inspirasi perjalanan untuk menjelajah dengan nyaman dan penuh makna.</p></div>
-          <span class="package-stamp">PERJALANAN<br><strong>BERMAKNA</strong></span>
-        </div>
-        <div class="package-grid">
-          <article class="package-card">
-            <div class="package-top"><span class="package-tag">SEHARI PENUH</span><span class="package-icon">✧</span></div>
-            <h3>Jejak Religi Yogyakarta</h3><p class="package-location">Yogyakarta · Wisata sejarah & budaya</p>
-            <p>Perjalanan mengenal situs bersejarah dan ragam warisan budaya di Yogyakarta.</p>
-            <div class="package-meta"><span>◷ 1 hari</span><span>◎ Rombongan kecil</span></div>
-            <div class="package-bottom"><div><small>Harga contoh mulai dari</small><strong>Rp350.000 <small>/orang</small></strong></div><a class="button button-outline package-book" href="#kontak" data-package="Jejak Religi Yogyakarta">Tanya Paket <span>↗</span></a></div>
-          </article>
-          <article class="package-card featured-package">
-            <div class="package-top"><span class="package-tag">PALING FLEKSIBEL</span><span class="package-icon">✦</span></div>
-            <h3>Warisan Spiritual Jawa</h3><p class="package-location">Magelang & Yogyakarta · Sejarah</p>
-            <p>Eksplorasi candi, arsitektur bersejarah, dan lanskap alam dalam satu perjalanan.</p>
-            <div class="package-meta"><span>◷ 2 hari 1 malam</span><span>◎ Grup / keluarga</span></div>
-            <div class="package-bottom"><div><small>Harga contoh mulai dari</small><strong>Rp850.000 <small>/orang</small></strong></div><a class="button button-outline package-book" href="#kontak" data-package="Warisan Spiritual Jawa">Tanya Paket <span>↗</span></a></div>
-          </article>
-          <article class="package-card">
-            <div class="package-top"><span class="package-tag">PESONA NUSANTARA</span><span class="package-icon">◎</span></div>
-            <h3>Ruang Hening Bali</h3><p class="package-location">Bali · Alam & warisan budaya</p>
-            <p>Menjelajahi arsitektur pura, tradisi lokal, dan keindahan alam dengan sikap saling menghormati.</p>
-            <div class="package-meta"><span>◷ 3 hari 2 malam</span><span>◎ Grup / keluarga</span></div>
-            <div class="package-bottom"><div><small>Harga contoh mulai dari</small><strong>Rp1.650.000 <small>/orang</small></strong></div><a class="button button-outline package-book" href="#kontak" data-package="Ruang Hening Bali">Tanya Paket <span>↗</span></a></div>
-          </article>
-        </div>
-        <p class="content-note">Harga dan paket di atas hanya ilustrasi desain, bukan penawaran yang sudah tersedia. Sesuaikan harga, fasilitas, jadwal, dan ketersediaan sebelum dipublikasikan.</p>
-      </div>
-    </section>
+body,
+button,
+input {
+  font-family: var(--font-body);
+}
 
-    <!-- KONTAK: LANGSUNG KE WHATSAPP ADMIN -->
-    <section class="contact-section" id="kontak">
-      <div class="container contact-wrap">
-        <div>
-          <p class="eyebrow light"><span></span> MARI RENCANAKAN</p>
-          <h2>Perjalanan penuh makna<br><em>dimulai dari sini.</em></h2>
-          <p>Punya destinasi impian atau ingin mengetahui pilihan perjalanan? Hubungi kami untuk mendiskusikan rencana Anda.</p>
-        </div>
-        <div class="contact-card">
-          <span class="contact-icon">↗</span>
-          <h3>Ingin tahu lebih lanjut?</h3>
-          <p>Hubungi Admin Nusa Religi melalui WhatsApp untuk bertanya tentang destinasi atau paket perjalanan.</p>
-          <a
-            class="button button-gold"
-            id="contactButton"
-            href="https://wa.me/6281234567890?text=Halo%20Admin%20Nusa%20Religi%2C%20saya%20ingin%20mendiskusikan%20rencana%20perjalanan%20wisata%20rohani."
-            target="_blank"
-            rel="noopener noreferrer"
-          >Hubungi melalui WhatsApp <span>↗</span></a>
-          <small>Hubungi pengelola secara langsung melalui WhatsApp.</small>
-        </div>
-      </div>
-    </section>
-  </main>
+button,
+input,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
 
-  <footer class="site-footer">
-    <div class="container footer-main">
-      <a class="brand footer-brand" href="#top"><span class="brand-mark">✦</span><span>Nusa <strong>Religi</strong><small>PERJALANAN PENUH MAKNA</small></span></a>
-      <p>Menghargai keberagaman.<br>Menemukan makna dalam perjalanan.</p>
-      <div class="footer-links"><a href="#destinasi">Destinasi</a><a href="#paket">Paket Wisata</a><a href="#kontak">Kontak</a></div>
-    </div>
-    <div class="container footer-bottom"><span>© <span id="year"></span> Nusa Religi. Semua hak dilindungi.</span><a href="#top">Kembali ke atas ↑</a></div>
-  </footer>
-</body>
-</html>
+button,
+input {
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+}
+
+h1,
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+}
+
+h2 em,
+h1 em {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.container {
+  width: min(1160px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+.section-pad {
+  padding-block: 100px;
+}
+
+/* NAVIGASI */
+
+.site-header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  background: rgba(255, 254, 250, 0.97);
+  border-bottom: 1px solid rgba(228, 229, 220, 0.8);
+  backdrop-filter: blur(14px);
+}
+
+.nav-wrap {
+  display: flex;
+  min-height: 84px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.brand {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 11px;
+  color: var(--green);
+  font-size: 21px;
+  line-height: 1.15;
+  letter-spacing: -0.6px;
+}
+
+.brand > span:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand strong {
+  font-weight: 700;
+}
+
+.brand small {
+  margin-top: 6px;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--gold);
+  background: var(--green);
+  font-size: 23px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.5vw, 34px);
+}
+
+.main-nav > a {
+  color: #45564b;
+  font-size: 12px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.main-nav > a:hover {
+  color: var(--gold-dark);
+}
+
+.main-nav .nav-contact {
+  padding: 11px 17px;
+  border-radius: 3px;
+  color: white;
+  background: var(--green);
+}
+
+.nav-contact span {
+  margin-left: 7px;
+  color: var(--gold);
+}
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: white;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  margin: 5px 0;
+  background: var(--green);
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  display: flex;
+  min-height: 640px;
+  min-height: min(720px, calc(100svh - 84px));
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  background: var(--green-dark);
+}
+
+.hero-image,
+.hero-shade {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-image {
+  background-image: url("https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=2000&q=85");
+  background-position: center 48%;
+  background-size: cover;
+  transform: scale(1.01);
+}
+
+.hero-shade {
+  background: linear-gradient(
+    90deg,
+    rgba(9, 35, 26, 0.88) 0%,
+    rgba(9, 35, 26, 0.69) 48%,
+    rgba(9, 35, 26, 0.18) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-block: 100px 120px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 22px;
+  color: var(--gold-dark);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.1px;
+  line-height: 1.6;
+}
+
+.eyebrow > span {
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  flex-shrink: 0;
+  background: var(--gold);
+}
+
+.eyebrow.light {
+  color: #f0d9a6;
+}
+
+.hero h1 {
+  max-width: 740px;
+  margin-bottom: 24px;
+  font-size: clamp(3rem, 6.8vw, 5.8rem);
+  line-height: 1.09;
+}
+
+.hero h1 em {
+  color: #ead3a0;
+}
+
+.hero-copy {
+  max-width: 550px;
+  margin-bottom: 32px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 25px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 47px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px 19px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 700;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-gold {
+  color: var(--green-dark);
+  background: var(--gold);
+}
+
+.button-gold:hover {
+  background: #ead19b;
+}
+
+.button-gold span {
+  font-size: 15px;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.text-link span {
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.text-link:hover span {
+  transform: translateX(4px);
+}
+
+.light-link {
+  color: white;
+}
+
+.dark-link {
+  color: var(--green);
+}
+
+.hero-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 75px;
+  color: rgba(255, 255, 255, 0.73);
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+
+.note-line {
+  width: 35px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero-index {
+  position: absolute;
+  right: max(32px, calc((100vw - 1160px) / 2));
+  bottom: 35px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.hero-index span {
+  color: var(--gold);
+}
+
+/* INTRODUKSI */
+
+.intro {
+  background: var(--paper);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: start;
+  gap: 80px;
+}
+
+.intro-grid h2 {
+  margin-bottom: 0;
+}
+
+.intro-grid h2 em {
+  color: var(--green);
+}
+
+.intro-copy {
+  padding-top: 38px;
+}
+
+.intro-copy > p {
+  margin-bottom: 25px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 2;
+}
+
+.value-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 70px;
+  padding-top: 29px;
+  border-top: 1px solid var(--line);
+}
+
+.value-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.value-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid #e7deca;
+  border-radius: 50%;
+  color: var(--gold-dark);
+  font-size: 22px;
+}
+
+.value-item strong,
+.value-item small {
+  display: block;
+}
+
+.value-item strong {
+  margin-bottom: 3px;
+  color: var(--green);
+  font-size: 12px;
+}
+
+.value-item small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* DESTINASI */
+
+.destinations {
+  background: var(--cream);
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 36px;
+}
+
+.section-heading h2 {
+  margin-bottom: 13px;
+  color: var(--green);
+}
+
+.section-heading h2 em {
+  color: var(--gold-dark);
+}
+
+.section-desc {
+  max-width: 580px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.search-box {
+  display: flex;
+  width: 250px;
+  min-height: 45px;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: white;
+}
+
+.search-box > span {
+  color: var(--gold-dark);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.search-box input {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 0;
+  border: 0;
+  outline: 0;
+  color: var(--ink);
+  background: transparent;
+  font-size: 11px;
+}
+
+.search-box:focus-within {
+  border-color: var(--gold-dark);
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 31px;
+}
+
+.filter-chip {
+  padding: 9px 15px;
+  border: 1px solid #dedfd6;
+  border-radius: 2px;
+  color: #5e6b61;
+  background: transparent;
+  font-size: 10px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.filter-chip:hover,
+.filter-chip.active {
+  border-color: var(--green);
+  color: white;
+  background: var(--green);
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 25px;
+}
+
+.destination-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e9e7de;
+  background: var(--paper);
+  box-shadow: 0 4px 16px rgba(22, 54, 41, 0.025);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.card-image {
+  position: relative;
+  height: 245px;
+  overflow: hidden;
+  background-color: #d9ded4;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-image::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.02) 45%,
+    rgba(0, 0, 0, 0.43) 100%
+  );
+  content: "";
+}
+
+.image-label,
+.image-number {
+  position: absolute;
+  z-index: 1;
+  bottom: 16px;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.image-label {
+  left: 17px;
+  padding: 5px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(16, 55, 44, 0.68);
+}
+
+.image-number {
+  right: 17px;
+  color: rgba(255, 255, 255, 0.82);
+  letter-spacing: 1px;
+}
+
+.card-body {
+  display: flex;
+  min-height: 270px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 23px 22px;
+}
+
+.card-category {
+  margin-bottom: 12px;
+  color: var(--gold-dark);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.card-body h3 {
+  margin-bottom: 12px;
+  color: var(--green);
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+}
+
+.card-body > p:not(.card-category) {
+  margin-bottom: 22px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.card-link span {
+  color: var(--gold-dark);
+  font-size: 14px;
+}
+
+.card-link:hover {
+  color: var(--gold-dark);
+}
+
+.empty-state {
+  padding: 25px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.content-note {
+  margin-top: 27px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+/* FOTO DESTINASI
+   URL berikut adalah foto ilustrasi pilihan.
+   Pastikan foto diperiksa sebelum publikasi. */
+
+.image-istiqlal {
+  background-image: url("https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1000&q=85");
+}
+
+.image-sendangsono {
+  background-image: url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=85");
+}
+
+.image-besakih {
+  background-image: url("https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=85");
+}
+
+.image-borobudur {
+  background-image: url("https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=1000&q=85");
+}
+
+.image-rhema {
+  background-image: url("https://images.unsplash.com/photo-1514894780887-121968d00567?auto=format&fit=crop&w=1000&q=85");
+}
+
+.image-prambanan {
+  background-image: url("https://images.unsplash.com/photo-1604848698030-c434ba08ece1?auto=format&fit=crop&w=1000&q=85");
+}
+
+/* KUTIPAN */
+
+.quote-band {
+  position: relative;
+  overflow: hidden;
+  padding: 85px 0 78px;
+  color: white;
+  background: var(--green);
+}
+
+.quote-content {
+  max-width: 850px;
+  text-align: center;
+}
+
+.quote-mark {
+  display: block;
+  height: 54px;
+  color: var(--gold);
+  font-family: var(--font-heading);
+  font-size: 80px;
+  line-height: 1;
+}
+
+.quote-content blockquote {
+  margin: 15px 0 25px;
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3.5vw, 2.65rem);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.quote-content > p {
+  margin-bottom: 0;
+  color: #e7d2a5;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+}
+
+/* PAKET WISATA */
+
+.packages {
+  background: var(--paper);
+}
+
+.package-stamp {
+  display: inline-flex;
+  width: 105px;
+  height: 105px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d9c59c;
+  border-radius: 50%;
+  color: var(--gold-dark);
+  font-size: 9px;
+  line-height: 1.6;
+  letter-spacing: 1.2px;
+  text-align: center;
+  transform: rotate(-9deg);
+}
+
+.package-stamp strong {
+  color: var(--green);
+}
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.package-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 28px 25px 24px;
+  border: 1px solid var(--line);
+  background: white;
+}
+
+.featured-package {
+  border-color: #cbb27b;
+  background: #fbfaf5;
+  box-shadow: var(--shadow);
+}
+
+.package-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 23px;
+}
+
+.package-tag {
+  padding: 5px 9px;
+  color: var(--gold-dark);
+  background: #f7f0e0;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.package-icon {
+  color: var(--gold-dark);
+  font-size: 24px;
+}
+
+.package-card h3 {
+  margin-bottom: 10px;
+  color: var(--green);
+  font-family: var(--font-heading);
+  font-size: 24px;
+}
+
+.package-location {
+  margin-bottom: 15px;
+  color: var(--gold-dark);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.package-card > p:not(.package-location) {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.package-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 15px;
+  margin-top: auto;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.package-bottom {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 20px;
+}
+
+.package-bottom > div > small {
+  display: block;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.package-bottom strong {
+  display: block;
+  margin-top: 5px;
+  color: var(--green);
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.package-bottom strong small {
+  display: inline;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.button-outline {
+  min-height: 39px;
+  gap: 7px;
+  padding: 9px 11px;
+  border-color: #cfd7d0;
+  color: var(--green);
+  background: transparent;
+  white-space: nowrap;
+}
+
+.button-outline:hover {
+  border-color: var(--green);
+  color: white;
+  background: var(--green);
+}
+
+/* KONTAK */
+
+.contact-section {
+  padding-block: 85px;
+  color: white;
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(216, 184, 120, 0.11),
+      transparent 32%
+    ),
+    var(--green-dark);
+}
+
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+  align-items: center;
+  gap: 85px;
+}
+
+.contact-wrap h2 {
+  margin-bottom: 20px;
+  font-size: clamp(2.3rem, 4.5vw, 3.7rem);
+}
+
+.contact-wrap > div:first-child > p:last-child {
+  max-width: 500px;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.73);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.contact-card {
+  padding: 32px;
+  color: var(--ink);
+  background: var(--paper);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.13);
+}
+
+.contact-icon {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  margin-bottom: 18px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--gold-dark);
+  background: #f6efdf;
+  font-size: 22px;
+}
+
+.contact-card h3 {
+  margin-bottom: 12px;
+  color: var(--green);
+  font-family: var(--font-heading);
+  font-size: 24px;
+}
+
+.contact-card > p {
+  margin-bottom: 23px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.contact-card .button {
+  width: 100%;
+}
+
+.contact-card > small {
+  display: block;
+  margin-top: 13px;
+  color: var(--muted);
+  font-size: 9px;
+  text-align: center;
+}
+
+/* FOOTER */
+
+.site-footer {
+  color: rgba(255, 255, 255, 0.76);
+  background: #0b2d23;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: center;
+  gap: 35px;
+  padding-block: 42px;
+}
+
+.footer-brand {
+  color: white;
+}
+
+.footer-brand small {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-main > p {
+  margin-bottom: 0;
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.footer-links a,
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 10px;
+}
+
+.footer-links a:hover,
+.footer-bottom a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  display: flex;
+  min-height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 10px;
+}
+
+/* AKSESIBILITAS */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* TABLET */
+
+@media (max-width: 980px) {
+  .container {
+    width: min(100% - 44px, 760px);
+  }
+
+  .main-nav {
+    gap: 15px;
+  }
+
+  .main-nav > a {
+    font-size: 11px;
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .package-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .package-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .intro-grid {
+    gap: 35px;
+  }
+
+  .contact-wrap {
+    gap: 40px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-links {
+    grid-column: 1 / -1;
+  }
+}
+
+/* HP */
+
+@media (max-width: 680px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+
+  .container {
+    width: calc(100% - 36px);
+  }
+
+  .section-pad {
+    padding-block: 70px;
+  }
+
+  .nav-wrap {
+    min-height: 72px;
+    gap: 15px;
+  }
+
+  .brand {
+    font-size: 19px;
+  }
+
+  .brand-mark {
+    width: 39px;
+    height: 39px;
+  }
+
+  .brand small {
+    font-size: 7px;
+    letter-spacing: 1.4px;
+  }
+
+  .menu-toggle {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 18px 18px;
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+    box-shadow: 0 14px 20px rgba(22, 54, 41, 0.08);
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav > a {
+    padding: 12px 4px;
+    font-size: 12px;
+  }
+
+  .main-nav .nav-contact {
+    margin-top: 8px;
+    padding: 12px 15px;
+    text-align: center;
+  }
+
+  .hero {
+    min-height: 650px;
+    min-height: min(760px, calc(100svh - 72px));
+  }
+
+  .hero-image {
+    background-position: 56% center;
+  }
+
+  .hero-shade {
+    background: linear-gradient(
+      90deg,
+      rgba(9, 35, 26, 0.86),
+      rgba(9, 35, 26, 0.55)
+    );
+  }
+
+  .hero-content {
+    padding-block: 75px 100px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 11vw, 4.2rem);
+  }
+
+  .hero-copy {
+    font-size: 13px;
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .hero-note {
+    margin-top: 48px;
+    font-size: 9px;
+  }
+
+  .hero-index {
+    right: 18px;
+    bottom: 22px;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .intro-copy {
+    padding-top: 0;
+  }
+
+  .value-strip {
+    grid-template-columns: 1fr;
+    gap: 21px;
+    margin-top: 40px;
+  }
+
+  .section-heading {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .filter-row {
+    gap: 7px;
+  }
+
+  .filter-chip {
+    padding: 8px 11px;
+    font-size: 9px;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card-image {
+    height: 235px;
+  }
+
+  .card-body {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .card-body h3 {
+    font-size: 23px;
+  }
+
+  .quote-band {
+    padding-block: 65px;
+  }
+
+  .quote-content blockquote {
+    font-size: 1.7rem;
+  }
+
+  .package-stamp {
+    width: 85px;
+    height: 85px;
+    font-size: 8px;
+  }
+
+  .package-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .package-card:last-child {
+    grid-column: auto;
+  }
+
+  .package-card {
+    padding: 24px 20px;
+  }
+
+  .package-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .package-bottom .button {
+    width: 100%;
+  }
+
+  .contact-section {
+    padding-block: 65px;
+  }
+
+  .contact-wrap {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-card {
+    padding: 25px 21px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding-block: 32px;
+  }
+
+  .footer-links {
+    grid-column: auto;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding-block: 15px;
+  }
+}
+
+/* HP KECIL */
+
+@media (max-width: 380px) {
+  .container {
+    width: calc(100% - 28px);
+  }
+
+  .hero h1 {
+    font-size: 2.55rem;
+  }
+
+  .package-card h3 {
+    font-size: 21px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
