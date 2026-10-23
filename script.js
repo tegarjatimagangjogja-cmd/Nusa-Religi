@@ -11,8 +11,8 @@ const destinations = [
         category: "makam-wali",
         categoryLabel: "Makam Wali",
         description: "Ziarah ke makam Maulana Malik Ibrahim, salah satu tokoh penting dalam sejarah penyebaran Islam di Jawa.",
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sunan%20Gresik%20%28Maulana%20Malik%20Ibrahim%29.jpg",
-        imageAlt: "Kompleks makam Maulana Malik Ibrahim, Sunan Gresik, di Gresik",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Maulana%20Malik%20Ibrahim%20Tomb%20Complex.jpg",
+        imageAlt: "Kompleks makam Maulana Malik Ibrahim di Gresik",
         searchTerms: "sunan gresik maulana malik ibrahim makam gresik"
     },
     {
