@@ -999,3 +999,123 @@ img {
         flex-wrap: wrap;
     }
 }
+
+
+/* ========================================
+   PERBAIKAN UKURAN FONT NUSA RELIGI
+   Menjaga desain dan fitur yang sudah ada
+======================================== */
+
+/* Ukuran dasar seluruh website */
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Judul utama */
+h1 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    line-height: 1.2;
+    overflow-wrap: break-word;
+}
+
+/* Judul bagian */
+h2 {
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    line-height: 1.3;
+}
+
+/* Judul kartu dan subbagian */
+h3 {
+    font-size: clamp(1.2rem, 2vw, 1.375rem);
+    line-height: 1.4;
+}
+
+/* Paragraf dan deskripsi */
+p {
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+/* Menu navigasi */
+nav a,
+nav button {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Tombol */
+button,
+.btn,
+.button,
+input[type="submit"] {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Formulir agar mudah dibaca */
+input,
+textarea,
+select {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Teks informasi tambahan */
+small,
+.text-small {
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: clamp(1.8rem, 7vw, 2.25rem);
+    }
+
+    h2 {
+        font-size: clamp(1.45rem, 5vw, 1.75rem);
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    nav a,
+    nav button {
+        font-size: 0.95rem;
+    }
+
+    button,
+    .btn,
+    .button,
+    input,
+    textarea,
+    select {
+        font-size: 1rem;
+    }
+}
+
+/* Menghormati pengaturan ukuran teks pengguna */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
