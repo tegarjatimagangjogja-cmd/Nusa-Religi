@@ -71,7 +71,7 @@ const destinations = [
         category: "makam-wali",
         categoryLabel: "Makam Wali",
         description: "Kunjungi kawasan makam Sunan Kalijaga di Kadilangu, Demak, salah satu tujuan utama wisata ziarah.",
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Kali%20Jaga%20Di%20Kadilangu%20Kab.Demak.jpg",,
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Kali%20Jaga%20Di%20Kadilangu%20Kab.Demak.jpg",
         imageAlt: "Kompleks makam Sunan Kalijaga di Kadilangu",
         searchTerms: "sunan kalijaga kadilangu demak"
     },
