@@ -3,101 +3,101 @@
 
 const ADMIN_WHATSAPP = "6289681198159";
 
-/* Data destinasi Wali Songo dengan foto khusus setiap lokasi. */
-
+/* DATA DESTINASI WALI SONGO */
 const destinations = [
     {
         name: "Sunan Gresik",
         location: "Gresik, Jawa Timur",
-        category: "jawa-timur",
-        categoryLabel: "JAWA TIMUR",
-        description: "Makam Maulana Malik Ibrahim, salah satu tujuan ziarah bersejarah di Gresik.",
+        category: "makam-wali",
+        categoryLabel: "Makam Wali",
+        description: "Ziarah ke makam Maulana Malik Ibrahim, salah satu tokoh penting dalam sejarah penyebaran Islam di Jawa.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Maulana%20Malik%20Ibrahim%20Tomb%20Complex.jpg",
-        imageAlt: "Kompleks makam Sunan Gresik",
-        searchTerms: "sunan gresik maulana malik ibrahim makam wali songo"
+        imageAlt: "Kompleks makam Maulana Malik Ibrahim di Gresik",
+        searchTerms: "sunan gresik maulana malik ibrahim makam gresik"
     },
     {
         name: "Sunan Ampel",
         location: "Surabaya, Jawa Timur",
-        category: "jawa-timur",
-        categoryLabel: "JAWA TIMUR",
-        description: "Kompleks Masjid dan Makam Sunan Ampel yang menjadi pusat wisata religi di Surabaya.",
+        category: "makam-wali",
+        categoryLabel: "Makam Wali",
+        description: "Kunjungi kawasan ziarah Sunan Ampel di Surabaya, salah satu tujuan wisata religi terkenal.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Ampel.jpg",
-        imageAlt: "Kompleks makam Sunan Ampel",
-        searchTerms: "sunan ampel surabaya masjid makam wali songo"
+        imageAlt: "Kompleks makam Sunan Ampel di Surabaya",
+        searchTerms: "sunan ampel surabaya makam masjid"
     },
     {
         name: "Sunan Bonang",
         location: "Tuban, Jawa Timur",
-        category: "jawa-timur",
-        categoryLabel: "JAWA TIMUR",
-        description: "Makam Sunan Bonang, salah satu tokoh penyebaran Islam di pesisir utara Jawa.",
+        category: "makam-wali",
+        categoryLabel: "Makam Wali",
+        description: "Kenali sejarah Sunan Bonang dan kompleks pemakaman beliau di Tuban.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Kompleks%20Pemakaman%20Sunan%20Bonang%2C%20Tuban.jpg",
         imageAlt: "Kompleks pemakaman Sunan Bonang di Tuban",
-        searchTerms: "sunan bonang tuban makam wali songo"
+        searchTerms: "sunan bonang makam tuban"
     },
     {
         name: "Sunan Drajat",
         location: "Lamongan, Jawa Timur",
-        category: "jawa-timur",
-        categoryLabel: "JAWA TIMUR",
-        description: "Kawasan makam Sunan Drajat yang menyimpan jejak sejarah dakwah dan kepedulian sosial.",
+        category: "makam-wali",
+        categoryLabel: "Makam Wali",
+        description: "Destinasi ziarah Sunan Drajat, tokoh dakwah yang dikenal dengan ajaran sosialnya.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Drajat.jpg",
         imageAlt: "Makam Sunan Drajat di Lamongan",
-        searchTerms: "sunan drajat lamongan makam wisata religi"
+        searchTerms: "sunan drajat makam lamongan"
     },
     {
         name: "Sunan Giri",
         location: "Gresik, Jawa Timur",
-        category: "jawa-timur",
-        categoryLabel: "JAWA TIMUR",
-        description: "Kompleks makam Sunan Giri di kawasan perbukitan Giri, Gresik.",
+        category: "makam-wali",
+        categoryLabel: "Makam Wali",
+        description: "Jelajahi kompleks bersejarah makam Sunan Giri di Kabupaten Gresik.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Giri%20Kedaton-Makam%20Sunan%20Giri.jpg",
         imageAlt: "Kompleks makam Sunan Giri di Gresik",
-        searchTerms: "sunan giri giri kedaton gresik makam wali songo"
+        searchTerms: "sunan giri giri kedaton gresik"
     },
     {
         name: "Sunan Kudus",
         location: "Kudus, Jawa Tengah",
-        category: "jawa-tengah",
-        categoryLabel: "JAWA TENGAH",
-        description: "Destinasi ziarah bersejarah yang berada di kawasan Menara Kudus.",
+        category: "sejarah-islam",
+        categoryLabel: "Sejarah Islam",
+        description: "Kenali warisan sejarah Sunan Kudus dan kawasan makamnya yang berdekatan dengan Menara Kudus.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Kudus.jpg",
-        imageAlt: "Makam Sunan Kudus",
-        searchTerms: "sunan kudus menara kudus makam wisata religi"
+        imageAlt: "Makam Sunan Kudus di Jawa Tengah",
+        searchTerms: "sunan kudus menara kudus sejarah islam"
     },
     {
         name: "Sunan Kalijaga",
-        location: "Demak, Jawa Tengah",
-        category: "jawa-tengah",
-        categoryLabel: "JAWA TENGAH",
-        description: "Makam Sunan Kalijaga di Kadilangu, Demak, salah satu tujuan ziarah terkenal.",
+        location: "Kadilangu, Demak, Jawa Tengah",
+        category: "makam-wali",
+        categoryLabel: "Makam Wali",
+        description: "Kunjungi kawasan makam Sunan Kalijaga di Kadilangu, Demak, salah satu tujuan utama wisata ziarah.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Kali%20Jaga%20Di%20Kadilangu%20Kab.Demak.jpg",
-        imageAlt: "Makam Sunan Kalijaga di Kadilangu, Demak",
-        searchTerms: "sunan kalijaga kadilangu demak makam wali songo"
+        imageAlt: "Kompleks makam Sunan Kalijaga di Kadilangu",
+        searchTerms: "sunan kalijaga kadilangu demak"
     },
     {
         name: "Sunan Muria",
-        location: "Kudus, Jawa Tengah",
-        category: "jawa-tengah",
-        categoryLabel: "JAWA TENGAH",
-        description: "Destinasi wisata religi di kawasan Gunung Muria dengan suasana alam pegunungan.",
+        location: "Colo, Kudus, Jawa Tengah",
+        category: "makam-wali",
+        categoryLabel: "Makam Wali",
+        description: "Destinasi ziarah di kawasan Gunung Muria dengan suasana alam pegunungan.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Muria.jpg",
-        imageAlt: "Kawasan makam Sunan Muria",
-        searchTerms: "sunan muria gunung muria kudus makam"
+        imageAlt: "Kawasan makam Sunan Muria di Colo",
+        searchTerms: "sunan muria gunung muria colo kudus"
     },
     {
         name: "Sunan Gunung Jati",
         location: "Cirebon, Jawa Barat",
-        category: "jawa-barat",
-        categoryLabel: "JAWA BARAT",
-        description: "Kompleks makam Sunan Gunung Jati, salah satu tujuan wisata religi di Cirebon.",
+        category: "makam-wali",
+        categoryLabel: "Makam Wali",
+        description: "Telusuri kawasan ziarah Sunan Gunung Jati yang memiliki peran penting dalam sejarah Islam di Cirebon.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Entrance%20to%20Makam%20Sunan%20Gunung%20Jati.jpg",
         imageAlt: "Pintu masuk kompleks makam Sunan Gunung Jati",
-        searchTerms: "sunan gunung jati cirebon makam wali songo"
+        searchTerms: "sunan gunung jati syarif hidayatullah cirebon"
     }
 ];
 
+/* ELEMEN HALAMAN */
 const destinationGrid = document.getElementById("destinationGrid");
 const destinationSearch = document.getElementById("destinationSearch");
 const destinationCount = document.getElementById("destinationCount");
@@ -128,6 +128,7 @@ function normalizeText(value) {
         .trim();
 }
 
+/* MEMBUAT KARTU DESTINASI */
 function renderDestinations(items) {
     if (!destinationGrid) return;
 
@@ -164,7 +165,8 @@ function renderDestinations(items) {
 
             <div class="card-body">
                 <span class="card-location">
-                    ⌖ ${escapeHTML(destination.location)}
+                    <span aria-hidden="true">📍</span>
+                    ${escapeHTML(destination.location)}
                 </span>
 
                 <h3>${escapeHTML(destination.name)}</h3>
@@ -186,7 +188,7 @@ function renderDestinations(items) {
 
         image.addEventListener("error", function () {
             image.alt = "Foto " + destination.name +
-                " belum dapat dimuat. Periksa koneksi atau tautan foto.";
+                " belum dapat dimuat. Periksa tautan gambar.";
 
             image.classList.add("image-unavailable");
             image.setAttribute("data-image-error", "true");
@@ -196,6 +198,7 @@ function renderDestinations(items) {
     });
 }
 
+/* PENCARIAN DAN FILTER */
 let activeCategory = "semua";
 
 function filterDestinations() {
@@ -237,6 +240,7 @@ if (categoryFilters) {
 
         categoryFilters.querySelectorAll("[data-filter]").forEach(function (chip) {
             const selected = chip === button;
+
             chip.classList.toggle("active", selected);
             chip.setAttribute("aria-pressed", String(selected));
         });
@@ -245,8 +249,7 @@ if (categoryFilters) {
     });
 }
 
-/* WhatsApp admin */
-
+/* WHATSAPP */
 function openWhatsApp(message) {
     const phone = ADMIN_WHATSAPP.replace(/\D/g, "");
 
@@ -261,8 +264,7 @@ function openWhatsApp(message) {
     window.open(whatsappURL, "_blank", "noopener,noreferrer");
 }
 
-/* Tombol tanya destinasi */
-
+/* TOMBOL TANYA DESTINASI */
 if (destinationGrid) {
     destinationGrid.addEventListener("click", function (event) {
         const button = event.target.closest(".destination-detail");
@@ -283,8 +285,7 @@ if (destinationGrid) {
     });
 }
 
-/* Tombol kontak paket */
-
+/* TOMBOL KONTAK PAKET */
 document.querySelectorAll(".package-contact").forEach(function (button) {
     button.addEventListener("click", function () {
         const packageName = button.dataset.package || "Paket wisata";
@@ -296,8 +297,7 @@ document.querySelectorAll(".package-contact").forEach(function (button) {
     });
 });
 
-/* Tautan WhatsApp halaman kontak */
-
+/* KONTAK WHATSAPP */
 const contactWhatsapp = document.getElementById("contactWhatsapp");
 
 if (contactWhatsapp) {
@@ -313,8 +313,7 @@ if (contactWhatsapp) {
     });
 }
 
-/* Menu navigasi */
-
+/* MENU NAVIGASI */
 if (menuToggle && mainNav) {
     menuToggle.addEventListener("click", function () {
         const isOpen = mainNav.classList.toggle("open");
@@ -332,14 +331,12 @@ if (menuToggle && mainNav) {
     });
 }
 
-/* Tahun otomatis */
-
+/* TAHUN OTOMATIS */
 const yearElement = document.getElementById("year");
 
 if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
 }
 
-/* Tampilkan destinasi */
-
+/* TAMPILKAN DESTINASI */
 renderDestinations(destinations);
