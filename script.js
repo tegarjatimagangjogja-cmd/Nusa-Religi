@@ -4,96 +4,97 @@
 const ADMIN_WHATSAPP = "6289681198159";
 
 /* Data destinasi Wali Songo dengan foto khusus setiap lokasi. */
+
 const destinations = [
     {
         name: "Sunan Gresik",
         location: "Gresik, Jawa Timur",
-        category: "makam-wali",
-        categoryLabel: "Makam Wali",
-        description: "Ziarah ke makam Maulana Malik Ibrahim, salah satu tokoh penting dalam sejarah penyebaran Islam di Jawa.",
+        category: "jawa-timur",
+        categoryLabel: "JAWA TIMUR",
+        description: "Makam Maulana Malik Ibrahim, salah satu tujuan ziarah bersejarah di Gresik.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Maulana%20Malik%20Ibrahim%20Tomb%20Complex.jpg",
-        imageAlt: "Kompleks makam Maulana Malik Ibrahim di Gresik",
-        searchTerms: "sunan gresik maulana malik ibrahim makam gresik"
+        imageAlt: "Kompleks makam Sunan Gresik",
+        searchTerms: "sunan gresik maulana malik ibrahim makam wali songo"
     },
     {
         name: "Sunan Ampel",
         location: "Surabaya, Jawa Timur",
-        category: "makam-wali",
-        categoryLabel: "Makam Wali",
-        description: "Kunjungi kawasan ziarah Sunan Ampel di Surabaya, salah satu tujuan wisata religi terkenal.",
+        category: "jawa-timur",
+        categoryLabel: "JAWA TIMUR",
+        description: "Kompleks Masjid dan Makam Sunan Ampel yang menjadi pusat wisata religi di Surabaya.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Ampel.jpg",
-        imageAlt: "Kompleks makam Sunan Ampel di Surabaya",
-        searchTerms: "sunan ampel raden rahmat makam surabaya"
+        imageAlt: "Kompleks makam Sunan Ampel",
+        searchTerms: "sunan ampel surabaya masjid makam wali songo"
     },
     {
         name: "Sunan Bonang",
         location: "Tuban, Jawa Timur",
-        category: "makam-wali",
-        categoryLabel: "Makam Wali",
-        description: "Kenali sejarah Sunan Bonang dan kompleks pemakaman beliau di Tuban.",
+        category: "jawa-timur",
+        categoryLabel: "JAWA TIMUR",
+        description: "Makam Sunan Bonang, salah satu tokoh penyebaran Islam di pesisir utara Jawa.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Kompleks%20Pemakaman%20Sunan%20Bonang%2C%20Tuban.jpg",
         imageAlt: "Kompleks pemakaman Sunan Bonang di Tuban",
-        searchTerms: "sunan bonang makam tuban pasujudan"
+        searchTerms: "sunan bonang tuban makam wali songo"
     },
     {
         name: "Sunan Drajat",
         location: "Lamongan, Jawa Timur",
-        category: "makam-wali",
-        categoryLabel: "Makam Wali",
-        description: "Destinasi ziarah Sunan Drajat, tokoh dakwah yang dikenal dengan ajaran sosialnya.",
+        category: "jawa-timur",
+        categoryLabel: "JAWA TIMUR",
+        description: "Kawasan makam Sunan Drajat yang menyimpan jejak sejarah dakwah dan kepedulian sosial.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Drajat.jpg",
-        imageAlt: "Foto makam Sunan Drajat di Paciran, Lamongan",
-        searchTerms: "sunan drajat makam lamongan jawa timur"
+        imageAlt: "Makam Sunan Drajat di Lamongan",
+        searchTerms: "sunan drajat lamongan makam wisata religi"
     },
     {
         name: "Sunan Giri",
         location: "Gresik, Jawa Timur",
-        category: "makam-wali",
-        categoryLabel: "Makam Wali",
-        description: "Jelajahi kompleks bersejarah makam Sunan Giri di Kabupaten Gresik.",
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Giri%20Gapura%20Undakan%20Ketiga.jpg",
-        imageAlt: "Gapura kompleks makam Sunan Giri di Giri Kedaton, Gresik",
-        searchTerms: "sunan giri raden paku giri kedaton gresik"
+        category: "jawa-timur",
+        categoryLabel: "JAWA TIMUR",
+        description: "Kompleks makam Sunan Giri di kawasan perbukitan Giri, Gresik.",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Giri%20Kedaton-Makam%20Sunan%20Giri.jpg",
+        imageAlt: "Kompleks makam Sunan Giri di Gresik",
+        searchTerms: "sunan giri giri kedaton gresik makam wali songo"
     },
     {
         name: "Sunan Kudus",
         location: "Kudus, Jawa Tengah",
-        category: "sejarah-islam",
-        categoryLabel: "Sejarah Islam",
-        description: "Kenali warisan sejarah Sunan Kudus dan kawasan makamnya yang berdekatan dengan Menara Kudus.",
+        category: "jawa-tengah",
+        categoryLabel: "JAWA TENGAH",
+        description: "Destinasi ziarah bersejarah yang berada di kawasan Menara Kudus.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Kudus.jpg",
-        imageAlt: "Makam Sunan Kudus di Kudus, Jawa Tengah",
-        searchTerms: "sunan kudus menara kudus makam jawa tengah"
+        imageAlt: "Makam Sunan Kudus",
+        searchTerms: "sunan kudus menara kudus makam wisata religi"
     },
     {
         name: "Sunan Kalijaga",
-        location: "Kadilangu, Demak, Jawa Tengah",
-        category: "makam-wali",
-        categoryLabel: "Makam Wali",
-        description: "Kunjungi kawasan makam Sunan Kalijaga di Kadilangu, Demak, salah satu tujuan utama wisata ziarah.",
+        location: "Demak, Jawa Tengah",
+        category: "jawa-tengah",
+        categoryLabel: "JAWA TENGAH",
+        description: "Makam Sunan Kalijaga di Kadilangu, Demak, salah satu tujuan ziarah terkenal.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Kali%20Jaga%20Di%20Kadilangu%20Kab.Demak.jpg",
-        imageAlt: "Kompleks makam Sunan Kalijaga di Kadilangu, Demak",
-        searchTerms: "sunan kalijaga kadilangu demak makam"
+        imageAlt: "Makam Sunan Kalijaga di Kadilangu, Demak",
+        searchTerms: "sunan kalijaga kadilangu demak makam wali songo"
     },
     {
         name: "Sunan Muria",
-        location: "Colo, Kudus, Jawa Tengah",
-        category: "makam-wali",
-        categoryLabel: "Makam Wali",
-        description: "Destinasi ziarah di kawasan Gunung Muria yang berkaitan dengan Sunan Muria.",
+        location: "Kudus, Jawa Tengah",
+        category: "jawa-tengah",
+        categoryLabel: "JAWA TENGAH",
+        description: "Destinasi wisata religi di kawasan Gunung Muria dengan suasana alam pegunungan.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Muria.jpg",
-        imageAlt: "Kompleks makam Sunan Muria di Colo, Gunung Muria, Kudus",
-        searchTerms: "sunan muria makam gunung muria colo kudus"
+        imageAlt: "Kawasan makam Sunan Muria",
+        searchTerms: "sunan muria gunung muria kudus makam"
     },
     {
         name: "Sunan Gunung Jati",
         location: "Cirebon, Jawa Barat",
-        category: "makam-wali",
-        categoryLabel: "Makam Wali",
-        description: "Telusuri kawasan ziarah Sunan Gunung Jati yang memiliki peran penting dalam sejarah Islam di Cirebon.",
+        category: "jawa-barat",
+        categoryLabel: "JAWA BARAT",
+        description: "Kompleks makam Sunan Gunung Jati, salah satu tujuan wisata religi di Cirebon.",
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/Entrance%20to%20Makam%20Sunan%20Gunung%20Jati.jpg",
-        imageAlt: "Pintu masuk kompleks makam Sunan Gunung Jati di Cirebon",
-        searchTerms: "sunan gunung jati syarif hidayatullah makam cirebon"
+        imageAlt: "Pintu masuk kompleks makam Sunan Gunung Jati",
+        searchTerms: "sunan gunung jati cirebon makam wali songo"
     }
 ];
 
