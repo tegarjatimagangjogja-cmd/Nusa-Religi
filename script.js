@@ -41,7 +41,7 @@ const destinations = [
         category: "makam-wali",
         categoryLabel: "Makam Wali",
         description: "Destinasi ziarah Sunan Drajat, tokoh dakwah yang dikenal dengan ajaran sosialnya.",
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Drajat.jpg",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Drajat%20Lamongan.jpg",
         imageAlt: "Makam Sunan Drajat di Lamongan",
         searchTerms: "sunan drajat makam lamongan"
     },
@@ -71,7 +71,7 @@ const destinations = [
         category: "makam-wali",
         categoryLabel: "Makam Wali",
         description: "Kunjungi kawasan makam Sunan Kalijaga di Kadilangu, Demak, salah satu tujuan utama wisata ziarah.",
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Kali%20Jaga%20Di%20Kadilangu%20Kab.Demak.jpg",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Kali%20Jaga%20Di%20Kadilangu%20Kab.Demak.jpg",,
         imageAlt: "Kompleks makam Sunan Kalijaga di Kadilangu",
         searchTerms: "sunan kalijaga kadilangu demak"
     },
