@@ -29,7 +29,7 @@ const destinations = [
     region: "Jawa Timur",
     description: "Telusuri jejak dakwah Sunan Bonang di Tuban dan pelajari hubungan sejarah Islam dengan seni serta kebudayaan setempat.",
     image: "https://www.google.com/imgres?q=makam%20bonang&imgurl=https%3A%2F%2Findonesiakaya.com%2Fwp-content%2Fuploads%2F2020%2F10%2Fmakam-sunan-bonang-1200.jpg&imgrefurl=https%3A%2F%2Findonesiakaya.com%2Fpustaka-indonesia%2Fziarah-makam-sunan-bonang-maestro-budaya-pencipta-tembang-tombo-ati%2F&docid=6SoU7_sGYbZmdM&tbnid=ad48TQFGKfR8IM&vet=12ahUKEwim4fP84tKXAxVEkeEIHcjjI-QQnPAOegQIThAA..i&w=1200&h=900&hcb=2&ved=2ahUKEwim4fP84tKXAxVEkeEIHcjjI-QQnPAOegQIThAA",
-    fallback: "https://indonesiakaya.com/pustaka-indonesia/ziarah-makam-sunan-bonang-maestro-budaya-pencipta-tembang-tombo-ati/"
+    fallback: "https://www.google.com/imgres?q=makam%20bonang&imgurl=https%3A%2F%2Findonesiakaya.com%2Fwp-content%2Fuploads%2F2020%2F10%2Fmakam-sunan-bonang-1200.jpg&imgrefurl=https%3A%2F%2Findonesiakaya.com%2Fpustaka-indonesia%2Fziarah-makam-sunan-bonang-maestro-budaya-pencipta-tembang-tombo-ati%2F&docid=6SoU7_sGYbZmdM&tbnid=ad48TQFGKfR8IM&vet=12ahUKEwim4fP84tKXAxVEkeEIHcjjI-QQnPAOegQIThAA..i&w=1200&h=900&hcb=2&ved=2ahUKEwim4fP84tKXAxVEkeEIHcjjI-QQnPAOegQIThAA"
   },
   {
     name: "Sunan Drajat",
@@ -38,7 +38,7 @@ const destinations = [
     region: "Jawa Timur",
     description: "Kenali peninggalan Sunan Drajat di Lamongan dan kisah dakwah yang dikenal dengan kepedulian sosial.",
     image: "https://www.google.com/imgres?q=makam%20sunan%20drajat&imgurl=https%3A%2F%2Fsalsawisata.com%2Fwp-content%2Fuploads%2F2022%2F12%2Fmakam-sunan-drajat-sekarang.avif&imgrefurl=https%3A%2F%2Fsalsawisata.com%2Fmakam-sunan-drajat%2F&docid=rQtupFx0AnacrM&tbnid=xIPRRYFwTsHbdM&vet=12ahUKEwjUsY3E49KXAxU4leEIHeqIKTMQnPAOegQIORAA..i&w=720&h=540&hcb=2&ved=2ahUKEwjUsY3E49KXAxU4leEIHeqIKTMQnPAOegQIORAA",
-    fallback: "https://salsawisata.com/makam-sunan-drajat/"
+    fallback: "https://www.google.com/imgres?q=makam%20sunan%20drajat&imgurl=https%3A%2F%2Fsalsawisata.com%2Fwp-content%2Fuploads%2F2022%2F12%2Fmakam-sunan-drajat-sekarang.avif&imgrefurl=https%3A%2F%2Fsalsawisata.com%2Fmakam-sunan-drajat%2F&docid=rQtupFx0AnacrM&tbnid=xIPRRYFwTsHbdM&vet=12ahUKEwjUsY3E49KXAxU4leEIHeqIKTMQnPAOegQIORAA..i&w=720&h=540&hcb=2&ved=2ahUKEwjUsY3E49KXAxU4leEIHeqIKTMQnPAOegQIORAA"
   },
   {
     name: "Sunan Giri",
@@ -56,7 +56,7 @@ const destinations = [
     region: "Jawa Tengah",
     description: "Temukan warisan sejarah di Kudus, termasuk kawasan Menara Kudus yang dikenal dengan perpaduan unsur arsitekturnya.",
     image: "https://www.google.com/imgres?q=makam%20sunan%20kudus&imgurl=https%3A%2F%2Fdynamic-media-cdn.tripadvisor.com%2Fmedia%2Fphoto-o%2F0d%2F47%2Fc0%2F78%2Fmenara-masdjid-sunan.jpg%3Fw%3D1200%26h%3D-1%26s%3D1&imgrefurl=https%3A%2F%2Fwww.tripadvisor.co.id%2FAttraction_Review-g1966182-d7390704-Reviews-Sunan_Kudus_Tomb-Kudus_Central_Java_Java.html&docid=6ewC1oI6gRrpGM&tbnid=ghVEiaL4OK5dyM&vet=12ahUKEwiF5oDf49KXAxXdi-EIHQ-FDrMQnPAOegUImQEQAA..i&w=1164&h=1500&hcb=2&ved=2ahUKEwiF5oDf49KXAxXdi-EIHQ-FDrMQnPAOegUImQEQAA",
-    fallback: "https://www.google.com/imgres?q=makam%20KUDUS&imgurl=https%3A%2F%2Ftourism.kuduskab.go.id%2Fwp-content%2Fuploads%2F2024%2F11%2FMenara-Kudus-1-1024x576.jpg&imgrefurl=https%3A%2F%2Ftourism.kuduskab.go.id%2Fid%2Fmasjid-menara-kudus%2F&docid=33YX0nbNiNw3tM&tbnid=reAN0OuaExVZvM&vet=12ahUKEwjSzPai3dKXAxU2ieEIHZq9PUQQnPAOegUIzAEQAA..i&w=1024&h=576&hcb=2&ved=2ahUKEwjSzPai3dKXAxU2ieEIHZq9PUQQnPAOegUIzAEQAA"
+    fallback: "https://www.google.com/imgres?q=makam%20sunan%20kudus&imgurl=https%3A%2F%2Fdynamic-media-cdn.tripadvisor.com%2Fmedia%2Fphoto-o%2F0d%2F47%2Fc0%2F78%2Fmenara-masdjid-sunan.jpg%3Fw%3D1200%26h%3D-1%26s%3D1&imgrefurl=https%3A%2F%2Fwww.tripadvisor.co.id%2FAttraction_Review-g1966182-d7390704-Reviews-Sunan_Kudus_Tomb-Kudus_Central_Java_Java.html&docid=6ewC1oI6gRrpGM&tbnid=ghVEiaL4OK5dyM&vet=12ahUKEwiF5oDf49KXAxXdi-EIHQ-FDrMQnPAOegUImQEQAA..i&w=1164&h=1500&hcb=2&ved=2ahUKEwiF5oDf49KXAxXdi-EIHQ-FDrMQnPAOegUImQEQAA"
   },
   {
     name: "Sunan Kalijaga",
@@ -65,7 +65,7 @@ const destinations = [
     city: "Demak",
     region: "Jawa Tengah",
     image: "https://www.google.com/imgres?q=makam%20sunan%20kalijaga&imgurl=https%3A%2F%2Fsunankalijaga.isi.ac.id%2Fmedia%2F6.%2520makam%2520kadilangu%2F30.%2520Makam%2520Sunan%2520Kalijaga%25200.jpeg&imgrefurl=https%3A%2F%2Fsunankalijaga.isi.ac.id%2Fakhir_hayat_sunan_kalijaga.html&docid=Dxv896CAOc5roM&tbnid=KSJs8CHMs8bW2M&vet=12ahUKEwi2pvD049KXAxWBiuEIHY-3ABsQnPAOegQIQxAA..i&w=680&h=510&hcb=2&ved=2ahUKEwi2pvD049KXAxWBiuEIHY-3ABsQnPAOegQIQxAA",
-    fallback:"https://sunankalijaga.isi.ac.id/akhir_hayat_sunan_kalijaga.html"
+    fallback: "https://www.google.com/imgres?q=makam%20sunan%20kalijaga&imgurl=https%3A%2F%2Fsunankalijaga.isi.ac.id%2Fmedia%2F6.%2520makam%2520kadilangu%2F30.%2520Makam%2520Sunan%2520Kalijaga%25200.jpeg&imgrefurl=https%3A%2F%2Fsunankalijaga.isi.ac.id%2Fakhir_hayat_sunan_kalijaga.html&docid=Dxv896CAOc5roM&tbnid=KSJs8CHMs8bW2M&vet=12ahUKEwi2pvD049KXAxWBiuEIHY-3ABsQnPAOegQIQxAA..i&w=680&h=510&hcb=2&ved=2ahUKEwi2pvD049KXAxWBiuEIHY-3ABsQnPAOegQIQxAA"
   },
   {
     name: "Sunan Muria",
@@ -74,8 +74,7 @@ const destinations = [
     region: "Jawa Tengah",
     description: "Rencanakan perjalanan menuju kawasan lereng Gunung Muria untuk mengenal makam Sunan Muria dan lingkungan alam sekitarnya.",
     image: "https://www.google.com/imgres?q=makam%20sunan%20muria&imgurl=https%3A%2F%2Fzjglidcehtsqqqhbdxyp.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fatourin%2Fimages%2Fdestination%2Fkudus%2Fmakam-sunan-muria-profile1670839697.jpeg%3Fx-image-process%3Dimage%2Fresize%2Cp_100%2Climit_1%2Fimageslim&imgrefurl=https%3A%2F%2Fatourin.com%2Fdestination%2Fkudus%2Fmakam-sunan-muria&docid=LUE6MADxmk-MzM&tbnid=yBfNHVg7BUtZeM&vet=12ahUKEwi7pvqG5NKXAxXei-EIHRw_HEAQnPAOegQITBAA..i&w=1080&h=718&hcb=2&ved=2ahUKEwi7pvqG5NKXAxXei-EIHRw_HEAQnPAOegQITBAA",
-    fallback: "https://atourin.com/destination/kudus/makam-sunan-muria"
-  },
+    fallback: "https://www.google.com/imgres?q=makam%20sunan%20muria&imgurl=https%3A%2F%2Fzjglidcehtsqqqhbdxyp.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fatourin%2Fimages%2Fdestination%2Fkudus%2Fmakam-sunan-muria-profile1670839697.jpeg%3Fx-image-process%3Dimage%2Fresize%2Cp_100%2Climit_1%2Fimageslim&imgrefurl=https%3A%2F%2Fatourin.com%2Fdestination%2Fkudus%2Fmakam-sunan-muria&docid=LUE6MADxmk-MzM&tbnid=yBfNHVg7BUtZeM&vet=12ahUKEwi7pvqG5NKXAxXei-EIHRw_HEAQnPAOegQITBAA..i&w=1080&h=718&hcb=2&ved=2ahUKEwi7pvqG5NKXAxXei-EIHRw_HEAQnPAOegQITBAA"
   {
     name: "Sunan Gunung Jati",
     alias: "Syarif Hidayatullah",
@@ -83,7 +82,7 @@ const destinations = [
     region: "Jawa Barat",
     description: "Jelajahi situs ziarah Sunan Gunung Jati di Cirebon dan kenali warisan sejarah Islam di pesisir utara Jawa Barat.",
     image: "https://www.google.com/imgres?q=makam%20sunan%20gunung%20jati&imgurl=https%3A%2F%2Fwww.hiacecirebontrans.com%2Fwp-content%2Fuploads%2F2017%2F03%2FMakam-Putri-Ong-Tien-Nio.jpg&imgrefurl=https%3A%2F%2Fwww.hiacecirebontrans.com%2Fmakam-sunan-gunung-jati%2F&docid=srctgpSKVM1ecM&tbnid=Lkj3UbxpXYY59M&vet=12ahUKEwiinK6V5NKXAxWWkOEIHXW4BCMQnPAOegUIvQEQAA..i&w=1600&h=1060&hcb=2&ved=2ahUKEwiinK6V5NKXAxWWkOEIHXW4BCMQnPAOegUIvQEQAA",
-    fallback: "https://www.hiacecirebontrans.com/makam-sunan-gunung-jati/"
+    fallback:  "https://www.google.com/imgres?q=makam%20sunan%20gunung%20jati&imgurl=https%3A%2F%2Fwww.hiacecirebontrans.com%2Fwp-content%2Fuploads%2F2017%2F03%2FMakam-Putri-Ong-Tien-Nio.jpg&imgrefurl=https%3A%2F%2Fwww.hiacecirebontrans.com%2Fmakam-sunan-gunung-jati%2F&docid=srctgpSKVM1ecM&tbnid=Lkj3UbxpXYY59M&vet=12ahUKEwiinK6V5NKXAxWWkOEIHXW4BCMQnPAOegUIvQEQAA..i&w=1600&h=1060&hcb=2&ved=2ahUKEwiinK6V5NKXAxWWkOEIHXW4BCMQnPAOegUIvQEQAA"
   }
 ];
 
