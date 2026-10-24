@@ -3,176 +3,166 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#174c3c">
-  <meta name="description" content="Nusa Religi — panduan wisata rohani dan ziarah Wali Songo di Indonesia.">
-  <title>Nusa Religi | Wisata Rohani Nusantara</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#075447">
+  <meta name="description" content="Jelajahi sembilan destinasi ziarah Wali Songo bersama Nusa Religi.">
+  <title>Nusa Religi | Destinasi Ziarah Wali Songo</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container nav">
-      <a href="#beranda" class="brand">
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#beranda" class="brand" aria-label="Nusa Religi - Beranda">
         <span class="brand-symbol">✦</span>
-        <span>Nusa <b>Religi</b><small>WISATA ROHANI NUSANTARA</small></span>
+        <span class="brand-copy">
+          <span class="brand-name">Nusa Religi</span>
+          <span class="brand-tagline">WISATA ROHANI NUSANTARA</span>
+        </span>
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
-      <nav class="nav-links" id="navLinks">
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
         <a href="#beranda">Beranda</a>
-        <a href="#destinasi">Destinasi</a>
-        <a href="#rute">Rute Ziarah</a>
-        <a href="#tentang">Tentang</a>
-        <a href="#kontak" class="nav-button">Hubungi Admin ↗</a>
+        <a class="active" href="#destinasi">Destinasi Ziarah</a>
+        <a href="#paket">Paket Wisata</a>
+        <a href="#rute">Rute Perjalanan</a>
+        <a href="#tentang">Tentang Kami</a>
+        <a href="#kontak">Kontak</a>
       </nav>
+
+      <a class="header-cta" href="#" data-whatsapp="Halo Admin Nusa Religi, saya ingin bertanya tentang perjalanan ziarah Wali Songo.">
+        <span>◉</span> Pesan Perjalanan
+      </a>
     </div>
   </header>
 
   <main>
     <section class="hero" id="beranda">
-      <div class="hero-bg"></div>
       <div class="hero-overlay"></div>
-      <div class="container hero-inner">
-        <p class="eyebrow light">✧ PERJALANAN ROHANI PENUH MAKNA</p>
-        <h1>Menapaki Jejak Wali,<br><em>Mengenal Warisan Negeri.</em></h1>
-        <p class="hero-description">Jelajahi makam Wali Songo, masjid bersejarah, dan kisah perjalanan dakwah Islam yang menjadi bagian dari sejarah Nusantara.</p>
-        <div class="hero-actions">
-          <a href="#destinasi" class="button button-gold">Jelajahi Destinasi <span>↗</span></a>
-          <a href="#rute" class="hero-link">Lihat Rute Ziarah →</a>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">JELAJAHI NUSANTARA</span>
+          <h1>Destinasi Ziarah Wali Songo</h1>
+          <p>Temukan sembilan destinasi ziarah Wali Songo yang tersebar di Pulau Jawa.</p>
         </div>
-        <div class="hero-caption">WISATA ROHANI <span>•</span> SEJARAH <span>•</span> BUDAYA</div>
+        <div class="hero-quote">
+          <p>“Jejak para wali,<br>warisan untuk negeri.”</p>
+          <span>✧ ───── ✧</span>
+        </div>
       </div>
     </section>
 
-    <section class="intro section" id="tentang">
-      <div class="container intro-grid">
+    <section class="destinations section-wrap" id="destinasi">
+      <div class="toolbar">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Cari nama Sunan atau lokasi..." aria-label="Cari destinasi">
+          <button id="clearSearch" class="clear-search" type="button" aria-label="Hapus pencarian" hidden>×</button>
+        </label>
+
+        <div class="filter-list" id="filters" aria-label="Filter wilayah">
+          <button class="filter-btn active" type="button" data-region="semua">Semua</button>
+          <button class="filter-btn" type="button" data-region="Jawa Timur">Jawa Timur</button>
+          <button class="filter-btn" type="button" data-region="Jawa Tengah">Jawa Tengah</button>
+          <button class="filter-btn" type="button" data-region="Jawa Barat">Jawa Barat</button>
+        </div>
+
+        <div class="destination-count"><span id="resultCount">9</span> Destinasi <span class="count-line">⟶</span></div>
+      </div>
+
+      <div class="destination-grid" id="destinationGrid" aria-live="polite"></div>
+      <div id="emptyState" class="empty-state" hidden>
+        <span>⌕</span>
+        <h2>Destinasi tidak ditemukan</h2>
+        <p>Coba gunakan kata kunci atau wilayah yang berbeda.</p>
+        <button class="filter-btn active" id="resetFilters" type="button">Tampilkan Semua Destinasi</button>
+      </div>
+    </section>
+
+    <section class="info-section" id="paket">
+      <div class="info-inner">
         <div>
-          <p class="eyebrow">TENTANG NUSA RELIGI</p>
-          <h2>Perjalanan yang dekat dengan sejarah, <em>bermakna bagi hati.</em></h2>
+          <span class="eyebrow">PERJALANAN PENUH MAKNA</span>
+          <h2>Rencanakan perjalanan ziarah Anda</h2>
+          <p>Diskusikan tujuan, jumlah peserta, dan rencana perjalanan bersama Admin Nusa Religi.</p>
         </div>
-        <div class="intro-text">
-          <p>Nusa Religi mengajak Anda mengenal destinasi wisata rohani melalui kisah para wali, tempat ziarah bersejarah, dan warisan budaya Islam di Indonesia.</p>
-          <p>Temukan lokasi yang ingin dikunjungi, pelajari informasi dasarnya, lalu rencanakan perjalanan dengan tetap menghormati adat dan aturan setempat.</p>
-        </div>
-      </div>
-      <div class="container value-grid">
-        <article class="value-item"><span>✧</span><div><b>Jejak Sejarah</b><p>Mengenal kisah para wali Nusantara.</p></div></article>
-        <article class="value-item"><span>⌖</span><div><b>Destinasi Pilihan</b><p>Menjelajahi tempat ziarah bersejarah.</p></div></article>
-        <article class="value-item"><span>❋</span><div><b>Budaya Nusantara</b><p>Menghargai tradisi dan warisan lokal.</p></div></article>
+        <a class="primary-btn" href="#" data-whatsapp="Halo Admin Nusa Religi, saya ingin bertanya tentang paket wisata ziarah Wali Songo.">Tanyakan Paket <span>→</span></a>
       </div>
     </section>
 
-    <section class="destinations section" id="destinasi">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">JELAJAHI NUSANTARA</p>
-            <h2>Destinasi Wisata <em>Rohani</em></h2>
-            <p class="section-description">Temukan sembilan destinasi ziarah Wali Songo yang tersebar di Pulau Jawa.</p>
-          </div>
-          <div class="search">
-            <label for="searchInput" class="sr-only">Cari destinasi</label>
-            <span>⌕</span>
-            <input id="searchInput" type="search" placeholder="Cari nama Sunan atau kota...">
-          </div>
-        </div>
-
-        <div class="filters" id="filters">
-          <button class="filter active" type="button" data-region="Semua">Semua Destinasi</button>
-          <button class="filter" type="button" data-region="Jawa Timur">Jawa Timur</button>
-          <button class="filter" type="button" data-region="Jawa Tengah">Jawa Tengah</button>
-          <button class="filter" type="button" data-region="Jawa Barat">Jawa Barat</button>
-        </div>
-
-        <div class="result-line">
-          <p id="resultCount" aria-live="polite">Memuat destinasi...</p>
-          <span>9 TOKOH WALI SONGO</span>
-        </div>
-
-        <div class="destination-grid" id="destinationGrid"></div>
-        <p class="empty-state" id="emptyState" hidden>Destinasi tidak ditemukan. Coba kata kunci atau filter wilayah lain.</p>
-        <p class="photo-note">Foto ditampilkan sebagai ilustrasi destinasi. Jika gambar tidak muncul, periksa koneksi internet atau buka sumber gambar melalui tautan pada kartu.</p>
+    <section class="route-section section-wrap" id="rute">
+      <div class="section-heading">
+        <span class="eyebrow">JELAJAHI PULAU JAWA</span>
+        <h2>Perjalanan dalam tiga wilayah</h2>
+        <p>Susun perjalanan sesuai destinasi dan waktu yang Anda miliki.</p>
+      </div>
+      <div class="region-cards">
+        <article class="region-card">
+          <span class="region-number">01</span>
+          <h3>Jawa Timur</h3>
+          <p>Gresik · Surabaya · Tuban · Lamongan</p>
+          <button type="button" data-route="Jawa Timur">Lihat Destinasi →</button>
+        </article>
+        <article class="region-card">
+          <span class="region-number">02</span>
+          <h3>Jawa Tengah</h3>
+          <p>Kudus · Demak · kawasan Gunung Muria</p>
+          <button type="button" data-route="Jawa Tengah">Lihat Destinasi →</button>
+        </article>
+        <article class="region-card">
+          <span class="region-number">03</span>
+          <h3>Jawa Barat</h3>
+          <p>Cirebon dan kawasan Gunung Jati</p>
+          <button type="button" data-route="Jawa Barat">Lihat Destinasi →</button>
+        </article>
       </div>
     </section>
 
-    <section class="quote-section">
-      <div class="container quote-inner">
-        <span class="quote-mark">“</span>
-        <blockquote>Mengenal jejak masa lalu, menghargai warisan hari ini, dan membawa pulang makna dari setiap perjalanan.</blockquote>
-        <p>NUSA RELIGI · WISATA ROHANI NUSANTARA</p>
+    <section class="about-section" id="tentang">
+      <div class="about-inner">
+        <span class="about-symbol">✧</span>
+        <span class="eyebrow">TENTANG NUSA RELIGI</span>
+        <h2>Mengenal jejak sejarah,<br>menemukan makna perjalanan.</h2>
+        <p>Nusa Religi membantu Anda mengenal destinasi ziarah Wali Songo dan merencanakan perjalanan religi dengan informasi yang lebih mudah dijangkau.</p>
       </div>
     </section>
 
-    <section class="routes section" id="rute">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">INSPIRASI PERJALANAN</p>
-            <h2>Rute Ziarah <em>Wali Songo</em></h2>
-            <p class="section-description">Susun perjalanan berdasarkan wilayah agar waktu dan jarak tempuh lebih mudah direncanakan.</p>
-          </div>
-        </div>
-        <div class="route-grid">
-          <article class="route-card">
-            <span class="route-number">01</span>
-            <p class="route-label">JAWA TIMUR</p>
-            <h3>Jejak Wali di Jawa Timur</h3>
-            <p>Gresik · Surabaya · Lamongan · Tuban</p>
-            <a href="#kontak" class="route-link" data-route="Jejak Wali di Jawa Timur">Tanyakan rute ini ↗</a>
-          </article>
-          <article class="route-card">
-            <span class="route-number">02</span>
-            <p class="route-label">JAWA TENGAH</p>
-            <h3>Menapaki Jejak Wali di Jawa Tengah</h3>
-            <p>Kudus · Gunung Muria · Demak</p>
-            <a href="#kontak" class="route-link" data-route="Jejak Wali di Jawa Tengah">Tanyakan rute ini ↗</a>
-          </article>
-          <article class="route-card">
-            <span class="route-number">03</span>
-            <p class="route-label">JAWA BARAT</p>
-            <h3>Ziarah ke Tanah Cirebon</h3>
-            <p>Cirebon · Makam Sunan Gunung Jati</p>
-            <a href="#kontak" class="route-link" data-route="Ziarah ke Tanah Cirebon">Tanyakan rute ini ↗</a>
-          </article>
-        </div>
-        <p class="photo-note">Rute tersebut adalah inspirasi awal, bukan jadwal perjalanan tetap. Urutan, durasi, transportasi, biaya, dan kondisi lokasi perlu dikonfirmasi sebelum berangkat.</p>
+    <section class="contact-section section-wrap" id="kontak">
+      <div>
+        <span class="eyebrow">BUTUH INFORMASI?</span>
+        <h2>Mari rencanakan ziarah Anda</h2>
+        <p>Hubungi Admin Nusa Religi untuk bertanya mengenai destinasi dan rencana perjalanan.</p>
       </div>
-    </section>
-
-    <section class="contact" id="kontak">
-      <div class="container contact-grid">
-        <div>
-          <p class="eyebrow light">MARI RENCANAKAN PERJALANAN</p>
-          <h2>Perjalanan penuh makna <em>dimulai dari sini.</em></h2>
-          <p>Ingin bertanya tentang destinasi atau menyusun rute ziarah bersama keluarga dan rombongan? Hubungi Admin Nusa Religi.</p>
-        </div>
-        <div class="contact-card">
-          <span class="contact-icon">↗</span>
-          <h3>Butuh informasi lebih lanjut?</h3>
-          <p>Diskusikan pilihan destinasi dan rencana perjalanan Anda melalui WhatsApp.</p>
-          <a class="button button-gold" id="whatsappButton" href="https://wa.me/6289681198159" target="_blank" rel="noopener noreferrer">Hubungi Admin WhatsApp ↗</a>
-          <small>Harga dan ketersediaan layanan dikonfirmasi langsung oleh Admin.</small>
-        </div>
-      </div>
+      <a class="primary-btn" href="#" data-whatsapp="Halo Admin Nusa Religi, saya ingin bertanya lebih lanjut tentang wisata ziarah Wali Songo.">Hubungi Admin WhatsApp ↗</a>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-top">
-      <a href="#beranda" class="brand footer-brand">
-        <span class="brand-symbol">✦</span>
-        <span>Nusa <b>Religi</b><small>WISATA ROHANI NUSANTARA</small></span>
-      </a>
-      <p>Mengenal sejarah Islam Nusantara,<br>menjelajahi Indonesia dengan penuh makna.</p>
-      <div class="footer-links"><a href="#destinasi">Destinasi</a><a href="#rute">Rute Ziarah</a><a href="#kontak">Kontak</a></div>
-    </div>
-    <div class="container footer-bottom">
-      <span>© <span id="year"></span> Nusa Religi</span>
-      <a href="#beranda">Kembali ke atas ↑</a>
-    </div>
+  <footer class="site-footer">
+    <a href="#beranda" class="footer-brand">✦ Nusa Religi</a>
+    <p>Wisata Rohani Nusantara</p>
+    <p>© <span id="currentYear"></span> Nusa Religi. Jelajahi dengan penuh makna.</p>
   </footer>
+
+  <dialog id="destinationDialog" class="destination-dialog">
+    <button class="dialog-close" id="dialogClose" type="button" aria-label="Tutup detail">×</button>
+    <img id="dialogImage" src="" alt="">
+    <div class="dialog-content">
+      <span id="dialogRegion" class="eyebrow"></span>
+      <h2 id="dialogTitle"></h2>
+      <p id="dialogLocation" class="dialog-location"></p>
+      <p id="dialogDescription"></p>
+      <a id="dialogMaps" class="secondary-btn" target="_blank" rel="noopener noreferrer">Lihat di Google Maps ↗</a>
+      <a id="dialogWhatsApp" class="primary-btn" href="#">Tanyakan Perjalanan →</a>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
 </body>
 </html>
