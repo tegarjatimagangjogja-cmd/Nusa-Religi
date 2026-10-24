@@ -1,216 +1,176 @@
 
 "use strict";
 
-// Nomor WhatsApp Admin Nusa Religi
 const ADMIN_WHATSAPP = "6289681198159";
 
-// Gambar utama memakai Wikimedia Commons.
-// Gambar cadangan ditampilkan apabila gambar utama gagal dimuat.
 const destinations = [
   {
     name: "Sunan Gresik",
-    otherName: "Maulana Malik Ibrahim",
-    city: "Gresik, Jawa Timur",
+    alias: "Maulana Malik Ibrahim",
+    city: "Gresik",
     region: "Jawa Timur",
-    category: "Makam Wali",
-    description: "Mengenal salah satu tokoh penting dalam sejarah awal penyebaran Islam di Jawa melalui kawasan makam bersejarah di Gresik.",
+    description: "Kenali salah satu tokoh penting dalam sejarah awal penyebaran Islam di Jawa melalui kompleks makam bersejarah di Gresik.",
     image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Maulana%20Malik%20Ibrahim%20Tomb%20Complex.jpg",
-    fallback: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1000&q=80",
-    source: "https://commons.wikimedia.org/wiki/Category:Sunan_Gresik"
+    fallback: "https://images.unsplash.com/photo-1598032895397-b9472444bf93?auto=format&fit=crop&w=900&q=85"
   },
   {
     name: "Sunan Ampel",
-    otherName: "Raden Rahmat",
-    city: "Surabaya, Jawa Timur",
+    alias: "Raden Rahmat",
+    city: "Surabaya",
     region: "Jawa Timur",
-    category: "Makam dan Masjid",
     description: "Kunjungi kawasan Masjid Agung Sunan Ampel dan kompleks ziarah yang menjadi bagian penting sejarah Islam di Surabaya.",
     image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Ampel.jpg",
-    fallback: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1000&q=80",
-    source: "https://commons.wikimedia.org/wiki/Category:Sunan_Ampel_Mausoleum"
+    fallback: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=900&q=85"
   },
   {
     name: "Sunan Bonang",
-    otherName: "Makhdum Ibrahim",
-    city: "Tuban, Jawa Timur",
+    alias: "Makhdum Ibrahim",
+    city: "Tuban",
     region: "Jawa Timur",
-    category: "Makam Wali",
     description: "Telusuri jejak dakwah Sunan Bonang di Tuban dan pelajari hubungan sejarah Islam dengan seni serta kebudayaan setempat.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Bonang.jpg",
-    fallback: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1000&q=80",
-    source: "https://www.google.com/search?q=Makam+Sunan+Bonang+Tuban"
+    image: "https://images.unsplash.com/photo-1590076215667-875d4ef9e0d7?auto=format&fit=crop&w=900&q=85",
+    fallback: "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=900&q=85"
   },
   {
     name: "Sunan Drajat",
-    otherName: "Raden Qasim",
-    city: "Lamongan, Jawa Timur",
+    alias: "Raden Qasim",
+    city: "Lamongan",
     region: "Jawa Timur",
-    category: "Makam dan Museum",
-    description: "Kenali peninggalan Sunan Drajat di Lamongan dan kisah dakwah yang dikenal menekankan kepedulian sosial.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Drajat.jpg",
-    fallback: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1000&q=80",
-    source: "https://www.google.com/search?q=Makam+Sunan+Drajat+Lamongan"
+    description: "Kenali peninggalan Sunan Drajat di Lamongan dan kisah dakwah yang dikenal dengan kepedulian sosial.",
+    image: "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=900&q=85",
+    fallback: "https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=900&q=85"
   },
   {
     name: "Sunan Giri",
-    otherName: "Raden Paku",
-    city: "Gresik, Jawa Timur",
+    alias: "Raden Paku",
+    city: "Gresik",
     region: "Jawa Timur",
-    category: "Makam Wali",
-    description: "Jelajahi kompleks makam Sunan Giri dan kawasan bersejarah Giri Kedaton yang berkaitan dengan perjalanan dakwahnya.",
+    description: "Jelajahi kompleks makam Sunan Giri dan kawasan Giri Kedaton yang berkaitan dengan sejarah dakwahnya.",
     image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Giri%20Gapura%20Undakan%20Pertama.jpg",
-    fallback: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1000&q=80",
-    source: "https://commons.wikimedia.org/wiki/Category:Sunan_Giri"
+    fallback: "https://images.unsplash.com/photo-1598032895397-b9472444bf93?auto=format&fit=crop&w=900&q=85"
   },
   {
     name: "Sunan Kudus",
-    otherName: "Ja'far Shadiq",
-    city: "Kudus, Jawa Tengah",
+    alias: "Ja'far Shadiq",
+    city: "Kudus",
     region: "Jawa Tengah",
-    category: "Makam dan Masjid",
-    description: "Temukan warisan sejarah di Kudus, termasuk kawasan Masjid Menara Kudus yang dikenal dengan perpaduan unsur arsitektur.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid%20Menara%20Kudus.jpg",
-    fallback: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1000&q=80",
-    source: "https://www.google.com/search?q=Makam+Sunan+Kudus+Masjid+Menara+Kudus"
+    description: "Temukan warisan sejarah di Kudus, termasuk kawasan Menara Kudus yang dikenal dengan perpaduan unsur arsitekturnya.",
+    image: "https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=900&q=85",
+    fallback: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=900&q=85"
   },
   {
     name: "Sunan Kalijaga",
-    otherName: "Raden Said",
-    city: "Kadilangu, Demak, Jawa Tengah",
+    alias: "Raden Said",
+    city: "Demak",
     region: "Jawa Tengah",
-    category: "Makam Wali",
-    description: "Kunjungi kompleks makam Sunan Kalijaga di Kadilangu dan pelajari kisah dakwah yang berkaitan dengan budaya Jawa.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Kali%20Jaga%20Di%20Kadilangu%20Kab.Demak.jpg",
-    fallback: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1000&q=80",
-    source: "https://www.google.com/search?q=Makam+Sunan+Kalijaga+Kadilangu+Demak"
+    description: "Kunjungi kawasan makam Sunan Kalijaga di Kadilangu dan pelajari kisah dakwah yang berkaitan dengan budaya Jawa.",
+    image: "https://images.unsplash.com/photo-1609948543911-3f5a9f6c7f8c?auto=format&fit=crop&w=900&q=85",
+    fallback: "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=900&q=85"
   },
   {
     name: "Sunan Muria",
-    otherName: "Raden Umar Said",
-    city: "Gunung Muria, Kudus, Jawa Tengah",
+    alias: "Raden Umar Said",
+    city: "Kudus",
     region: "Jawa Tengah",
-    category: "Makam Wali",
     description: "Rencanakan perjalanan menuju kawasan lereng Gunung Muria untuk mengenal makam Sunan Muria dan lingkungan alam sekitarnya.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Muria.jpg",
-    fallback: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1000&q=80",
-    source: "https://www.google.com/search?q=Makam+Sunan+Muria+Kudus"
+    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=85",
+    fallback: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85"
   },
   {
     name: "Sunan Gunung Jati",
-    otherName: "Syarif Hidayatullah",
-    city: "Cirebon, Jawa Barat",
+    alias: "Syarif Hidayatullah",
+    city: "Cirebon",
     region: "Jawa Barat",
-    category: "Makam Wali",
     description: "Jelajahi situs ziarah Sunan Gunung Jati di Cirebon dan kenali warisan sejarah Islam di pesisir utara Jawa Barat.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Gunung%20Jati.jpg",
-    fallback: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1000&q=80",
-    source: "https://www.google.com/search?q=Makam+Sunan+Gunung+Jati+Cirebon"
+    image: "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=900&q=85",
+    fallback: "https://images.unsplash.com/photo-1590076215667-875d4ef9e0d7?auto=format&fit=crop&w=900&q=85"
   }
 ];
 
-const destinationGrid = document.getElementById("destinationGrid");
+const grid = document.getElementById("destinationGrid");
 const searchInput = document.getElementById("searchInput");
-const filters = document.getElementById("filters");
+const clearSearch = document.getElementById("clearSearch");
 const resultCount = document.getElementById("resultCount");
 const emptyState = document.getElementById("emptyState");
+const filterButtons = document.querySelectorAll(".filter-btn[data-region]");
 const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-const yearElement = document.getElementById("year");
+const mainNav = document.getElementById("mainNav");
 
-let selectedRegion = "Semua";
+let selectedRegion = "semua";
 
-// Escape text before inserting it into HTML.
 function escapeHTML(value) {
-  return String(value).replace(/[&<>"']/g, function (character) {
-    const entities = {
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#039;"
-    };
-
-    return entities[character];
-  });
+  return String(value).replace(/[&<>"']/g, character => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;"
+  })[character]);
 }
 
-function whatsappLink(message) {
-  return "https://wa.me/" + ADMIN_WHATSAPP +
-    "?text=" + encodeURIComponent(message);
+function whatsappURL(message) {
+  return `https://wa.me/${ADMIN_WHATSAPP}?text=${encodeURIComponent(message)}`;
 }
 
 function renderDestinations() {
-  if (!destinationGrid) return;
+  const keyword = searchInput.value.trim().toLocaleLowerCase("id");
 
-  const keyword = searchInput
-    ? searchInput.value.trim().toLocaleLowerCase("id")
-    : "";
-
-  const filteredDestinations = destinations.filter(function (destination) {
-    const searchableText = [
+  const filtered = destinations.filter(destination => {
+    const searchable = [
       destination.name,
-      destination.otherName,
+      destination.alias,
       destination.city,
       destination.region,
-      destination.category,
       destination.description
     ].join(" ").toLocaleLowerCase("id");
 
-    const matchesKeyword = searchableText.includes(keyword);
+    const matchesKeyword = searchable.includes(keyword);
     const matchesRegion =
-      selectedRegion === "Semua" ||
+      selectedRegion === "semua" ||
       destination.region === selectedRegion;
 
     return matchesKeyword && matchesRegion;
   });
 
-  destinationGrid.innerHTML = filteredDestinations.map(function (destination) {
-    const name = escapeHTML(destination.name);
-    const otherName = escapeHTML(destination.otherName);
-    const city = escapeHTML(destination.city);
-    const region = escapeHTML(destination.region);
-    const category = escapeHTML(destination.category);
-    const description = escapeHTML(destination.description);
-    const image = escapeHTML(destination.image);
-    const fallback = escapeHTML(destination.fallback);
-    const source = escapeHTML(destination.source);
+  resultCount.textContent = filtered.length;
+  emptyState.hidden = filtered.length !== 0;
+  grid.hidden = filtered.length === 0;
 
-    const message = "Assalamu'alaikum Admin Nusa Religi. " +
-      "Saya ingin bertanya tentang wisata rohani ke " +
-      destination.name + " di " + destination.city +
-      ". Mohon informasi rute dan persiapan perjalanannya.";
+  grid.innerHTML = filtered.map(destination => {
+    const index = destinations.indexOf(destination);
 
     return `
       <article class="destination-card">
-        <div class="destination-photo-wrap">
+        <div class="card-photo-wrap">
           <img
-            class="destination-photo"
-            src="${image}"
-            data-fallback="${fallback}"
-            alt="Foto destinasi wisata rohani ${name} di ${city}"
+            class="card-photo"
+            src="${escapeHTML(destination.image)}"
+            data-fallback="${escapeHTML(destination.fallback)}"
+            alt="Foto destinasi ${escapeHTML(destination.name)} di ${escapeHTML(destination.city)}"
             loading="lazy"
             decoding="async"
           >
-          <span class="destination-region">${region}</span>
+          <span class="region-tag">${escapeHTML(destination.region)}</span>
         </div>
 
-        <div class="destination-body">
-          <div class="destination-kicker">${category}</div>
-          <h3>${name}</h3>
-          <p class="destination-location">⌖ ${city}</p>
-          <p>${description}</p>
+        <div class="card-content">
+          <h3>${escapeHTML(destination.name)}</h3>
+          <p class="card-alias">(${escapeHTML(destination.alias)})</p>
 
-          <div class="destination-actions">
-            <a
-              class="destination-link"
-              href="${source}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Lihat Foto & Informasi ↗</a>
+          <p class="card-location">
+            <span class="location-pin" aria-hidden="true">●</span>
+            <span>${escapeHTML(destination.city)}, ${escapeHTML(destination.region)}</span>
+          </p>
 
+          <p class="card-description">${escapeHTML(destination.description)}</p>
+
+          <div class="card-actions">
+            <button class="card-detail-btn" type="button" data-detail="${index}">
+              Lihat Detail →
+            </button>
             <a
-              class="destination-link secondary"
-              href="${whatsappLink(message)}"
+              class="card-ask-btn"
+              href="${whatsappURL(`Halo Admin Nusa Religi, saya ingin bertanya tentang ziarah ${destination.name} di ${destination.city}.`)}"
               target="_blank"
               rel="noopener noreferrer"
             >Tanya Admin</a>
@@ -220,98 +180,143 @@ function renderDestinations() {
     `;
   }).join("");
 
-  if (resultCount) {
-    resultCount.textContent =
-      "Menampilkan " + filteredDestinations.length +
-      " dari " + destinations.length + " destinasi";
-  }
+  setupImageFallbacks();
+}
 
-  if (emptyState) {
-    emptyState.hidden = filteredDestinations.length !== 0;
-  }
+function setupImageFallbacks() {
+  document.querySelectorAll(".card-photo").forEach(img => {
+    if (img.dataset.fallbackReady) return;
+    img.dataset.fallbackReady = "true";
 
-  // Atur penanganan gambar setelah kartu dibuat.
-  destinationGrid.querySelectorAll(".destination-photo").forEach(function (img) {
-    img.addEventListener("error", function () {
-      const fallback = img.dataset.fallback;
-
-      if (fallback && img.src !== fallback && !img.dataset.fallbackTried) {
-        img.dataset.fallbackTried = "true";
-        img.src = fallback;
-        return;
+    img.addEventListener("error", () => {
+      if (img.dataset.usingFallback !== "true") {
+        img.dataset.usingFallback = "true";
+        img.src = img.dataset.fallback;
+      } else {
+        img.style.visibility = "hidden";
+        img.parentElement.style.background =
+          "linear-gradient(135deg, #e4eee7, #c4d8cb)";
       }
-
-      // Jangan biarkan gambar rusak merusak tampilan kartu.
-      img.classList.add("image-failed");
-      img.alt = "Foto belum tersedia untuk " +
-        img.alt.replace("Foto destinasi wisata rohani ", "");
-      img.removeAttribute("src");
-    }, { once: true });
-  });
-}
-
-// Pencarian destinasi
-if (searchInput) {
-  searchInput.addEventListener("input", renderDestinations);
-}
-
-// Filter wilayah
-if (filters) {
-  filters.addEventListener("click", function (event) {
-    const button = event.target.closest("[data-region]");
-
-    if (!button) return;
-
-    selectedRegion = button.dataset.region;
-
-    filters.querySelectorAll(".filter").forEach(function (filter) {
-      const isActive = filter === button;
-      filter.classList.toggle("active", isActive);
-      filter.setAttribute("aria-pressed", String(isActive));
-    });
-
-    renderDestinations();
-  });
-}
-
-// Menu navigasi untuk ponsel dan tablet
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener("click", function () {
-    const isOpen = navLinks.classList.toggle("open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-    menuToggle.setAttribute(
-      "aria-label",
-      isOpen ? "Tutup menu" : "Buka menu"
-    );
-    menuToggle.textContent = isOpen ? "✕" : "☰";
-  });
-
-  navLinks.querySelectorAll("a").forEach(function (link) {
-    link.addEventListener("click", function () {
-      navLinks.classList.remove("open");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", "Buka menu");
-      menuToggle.textContent = "☰";
     });
   });
 }
 
-// Tombol rute mengirim pesan yang sesuai ke WhatsApp.
-document.querySelectorAll("[data-route]").forEach(function (link) {
-  const routeName = link.dataset.route;
-  const message = "Assalamu'alaikum Admin Nusa Religi. " +
-    "Saya ingin bertanya tentang rute wisata rohani: " +
-    routeName + ". Mohon informasi rute, durasi, dan persiapannya.";
+function updateActiveFilter(region) {
+  selectedRegion = region;
 
-  link.href = whatsappLink(message);
+  filterButtons.forEach(button => {
+    const active = button.dataset.region === region;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+
+  renderDestinations();
+}
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    updateActiveFilter(button.dataset.region);
+  });
+});
+
+searchInput.addEventListener("input", () => {
+  clearSearch.hidden = searchInput.value.length === 0;
+  renderDestinations();
+});
+
+clearSearch.addEventListener("click", () => {
+  searchInput.value = "";
+  clearSearch.hidden = true;
+  renderDestinations();
+  searchInput.focus();
+});
+
+document.getElementById("resetFilters").addEventListener("click", () => {
+  searchInput.value = "";
+  clearSearch.hidden = true;
+  updateActiveFilter("semua");
+});
+
+document.querySelectorAll("[data-route]").forEach(button => {
+  button.addEventListener("click", () => {
+    updateActiveFilter(button.dataset.route);
+    document.getElementById("destinasi").scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+const dialog = document.getElementById("destinationDialog");
+const dialogImage = document.getElementById("dialogImage");
+const dialogRegion = document.getElementById("dialogRegion");
+const dialogTitle = document.getElementById("dialogTitle");
+const dialogLocation = document.getElementById("dialogLocation");
+const dialogDescription = document.getElementById("dialogDescription");
+const dialogMaps = document.getElementById("dialogMaps");
+const dialogWhatsApp = document.getElementById("dialogWhatsApp");
+
+grid.addEventListener("click", event => {
+  const button = event.target.closest("[data-detail]");
+  if (!button) return;
+
+  const destination = destinations[Number(button.dataset.detail)];
+  if (!destination) return;
+
+  dialogImage.onerror = () => {
+    dialogImage.onerror = null;
+    dialogImage.src = destination.fallback;
+  };
+
+  dialogImage.src = destination.image;
+  dialogImage.alt = `Foto ${destination.name}`;
+  dialogRegion.textContent = destination.region;
+  dialogTitle.textContent = destination.name;
+  dialogLocation.textContent =
+    `${destination.city}, ${destination.region} · ${destination.alias}`;
+  dialogDescription.textContent = destination.description;
+
+  const mapsQuery = encodeURIComponent(
+    `Makam ${destination.name}, ${destination.city}, Indonesia`
+  );
+
+  dialogMaps.href = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`;
+  dialogWhatsApp.href = whatsappURL(
+    `Halo Admin Nusa Religi, saya ingin mengetahui informasi perjalanan ke ${destination.name} di ${destination.city}.`
+  );
+
+  if (typeof dialog.showModal === "function") {
+    dialog.showModal();
+  } else {
+    window.open(dialogMaps.href, "_blank", "noopener");
+  }
+});
+
+document.getElementById("dialogClose").addEventListener("click", () => {
+  dialog.close();
+});
+
+dialog.addEventListener("click", event => {
+  if (event.target === dialog) dialog.close();
+});
+
+document.querySelectorAll("[data-whatsapp]").forEach(link => {
+  link.href = whatsappURL(link.dataset.whatsapp);
   link.target = "_blank";
   link.rel = "noopener noreferrer";
 });
 
-// Tahun otomatis di footer.
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
-}
+menuToggle.addEventListener("click", () => {
+  const isOpen = mainNav.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? "Tutup menu" : "Buka menu");
+});
 
-// Tampilkan kartu destinasi saat halaman selesai dimuat.
+mainNav.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    mainNav.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Buka menu");
+  });
+});
+
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+
 renderDestinations();
