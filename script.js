@@ -19,8 +19,8 @@ const destinations = [
     city: "Surabaya",
     region: "Jawa Timur",
     description: "Kunjungi kawasan Masjid Agung Sunan Ampel dan kompleks ziarah yang menjadi bagian penting sejarah Islam di Surabaya.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Ampel.jpg",
-    fallback: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=900&q=85"
+    image: "https://aswajanusantara.com/esai/sunan-ampel-dalam-lapisan-sejarah/",
+    fallback:  "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=900&q=85"
   },
   {
     name: "Sunan Bonang",
@@ -28,8 +28,8 @@ const destinations = [
     city: "Tuban",
     region: "Jawa Timur",
     description: "Telusuri jejak dakwah Sunan Bonang di Tuban dan pelajari hubungan sejarah Islam dengan seni serta kebudayaan setempat.",
-    image: "https://images.unsplash.com/photo-1590076215667-875d4ef9e0d7?auto=format&fit=crop&w=900&q=85",
-    fallback: "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=900&q=85"
+    image: "https://indonesiakaya.com/pustaka-indonesia/ziarah-makam-sunan-bonang-maestro-budaya-pencipta-tembang-tombo-ati/",
+    fallback: "https://indonesiakaya.com/pustaka-indonesia/ziarah-makam-sunan-bonang-maestro-budaya-pencipta-tembang-tombo-ati/"
   },
   {
     name: "Sunan Drajat",
@@ -37,8 +37,8 @@ const destinations = [
     city: "Lamongan",
     region: "Jawa Timur",
     description: "Kenali peninggalan Sunan Drajat di Lamongan dan kisah dakwah yang dikenal dengan kepedulian sosial.",
-    image: "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=900&q=85",
-    fallback: "https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=900&q=85"
+    image: "https://salsawisata.com/makam-sunan-drajat/",
+    fallback: "https://salsawisata.com/makam-sunan-drajat/"
   },
   {
     name: "Sunan Giri",
@@ -46,8 +46,8 @@ const destinations = [
     city: "Gresik",
     region: "Jawa Timur",
     description: "Jelajahi kompleks makam Sunan Giri dan kawasan Giri Kedaton yang berkaitan dengan sejarah dakwahnya.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Makam%20Sunan%20Giri%20Gapura%20Undakan%20Pertama.jpg",
-    fallback: "https://images.unsplash.com/photo-1598032895397-b9472444bf93?auto=format&fit=crop&w=900&q=85"
+    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYsx0faXvX2hAUNJSFRx22rMuXJH9s_YnX2MGNYX3JqWA8mXmaoHCnrcN75hFhcCYDYhnf4MlNKjZp9x-HvYRjuuxg2RXDQdOMRGDIOAN_UdBLYtzq3YDe2cFiCPpQE5c3NtUMcSWgcIei/s1600/Sunan+Giri+Gresik+%25283%2529_1_wm.jpg",
+    fallback:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYsx0faXvX2hAUNJSFRx22rMuXJH9s_YnX2MGNYX3JqWA8mXmaoHCnrcN75hFhcCYDYhnf4MlNKjZp9x-HvYRjuuxg2RXDQdOMRGDIOAN_UdBLYtzq3YDe2cFiCPpQE5c3NtUMcSWgcIei/s1600/Sunan+Giri+Gresik+%25283%2529_1_wm.jpg"
   },
   {
     name: "Sunan Kudus",
@@ -55,17 +55,17 @@ const destinations = [
     city: "Kudus",
     region: "Jawa Tengah",
     description: "Temukan warisan sejarah di Kudus, termasuk kawasan Menara Kudus yang dikenal dengan perpaduan unsur arsitekturnya.",
-    image: "https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=900&q=85",
-    fallback: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=900&q=85"
+    image: "https://www.google.com/imgres?q=makam%20KUDUS&imgurl=https%3A%2F%2Ftourism.kuduskab.go.id%2Fwp-content%2Fuploads%2F2024%2F11%2FMenara-Kudus-1-1024x576.jpg&imgrefurl=https%3A%2F%2Ftourism.kuduskab.go.id%2Fid%2Fmasjid-menara-kudus%2F&docid=33YX0nbNiNw3tM&tbnid=reAN0OuaExVZvM&vet=12ahUKEwjSzPai3dKXAxU2ieEIHZq9PUQQnPAOegUIzAEQAA..i&w=1024&h=576&hcb=2&ved=2ahUKEwjSzPai3dKXAxU2ieEIHZq9PUQQnPAOegUIzAEQAA",
+    fallback: "https://www.google.com/imgres?q=makam%20KUDUS&imgurl=https%3A%2F%2Ftourism.kuduskab.go.id%2Fwp-content%2Fuploads%2F2024%2F11%2FMenara-Kudus-1-1024x576.jpg&imgrefurl=https%3A%2F%2Ftourism.kuduskab.go.id%2Fid%2Fmasjid-menara-kudus%2F&docid=33YX0nbNiNw3tM&tbnid=reAN0OuaExVZvM&vet=12ahUKEwjSzPai3dKXAxU2ieEIHZq9PUQQnPAOegUIzAEQAA..i&w=1024&h=576&hcb=2&ved=2ahUKEwjSzPai3dKXAxU2ieEIHZq9PUQQnPAOegUIzAEQAA"
   },
   {
     name: "Sunan Kalijaga",
+    description: "Kunjungi kawasan makam Sunan Kalijaga di Kadilangu dan pelajari kisah dakwah yang berkaitan dengan budaya Jawa.",
     alias: "Raden Said",
     city: "Demak",
     region: "Jawa Tengah",
-    description: "Kunjungi kawasan makam Sunan Kalijaga di Kadilangu dan pelajari kisah dakwah yang berkaitan dengan budaya Jawa.",
-    image: "https://images.unsplash.com/photo-1609948543911-3f5a9f6c7f8c?auto=format&fit=crop&w=900&q=85",
-    fallback: "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=900&q=85"
+    image: "https://sunankalijaga.isi.ac.id/akhir_hayat_sunan_kalijaga.html",
+    fallback:"https://sunankalijaga.isi.ac.id/akhir_hayat_sunan_kalijaga.html"
   },
   {
     name: "Sunan Muria",
@@ -73,8 +73,8 @@ const destinations = [
     city: "Kudus",
     region: "Jawa Tengah",
     description: "Rencanakan perjalanan menuju kawasan lereng Gunung Muria untuk mengenal makam Sunan Muria dan lingkungan alam sekitarnya.",
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=85",
-    fallback: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85"
+    image: "https://atourin.com/destination/kudus/makam-sunan-muria",
+    fallback: "https://atourin.com/destination/kudus/makam-sunan-muria"
   },
   {
     name: "Sunan Gunung Jati",
@@ -82,8 +82,8 @@ const destinations = [
     city: "Cirebon",
     region: "Jawa Barat",
     description: "Jelajahi situs ziarah Sunan Gunung Jati di Cirebon dan kenali warisan sejarah Islam di pesisir utara Jawa Barat.",
-    image: "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=900&q=85",
-    fallback: "https://images.unsplash.com/photo-1590076215667-875d4ef9e0d7?auto=format&fit=crop&w=900&q=85"
+    image: "https://www.hiacecirebontrans.com/makam-sunan-gunung-jati/",
+    fallback: "https://www.hiacecirebontrans.com/makam-sunan-gunung-jati/"
   }
 ];
 
